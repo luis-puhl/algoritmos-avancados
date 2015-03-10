@@ -35,26 +35,12 @@ void process_solution(vector<int> a){
 	printf("}\n");
 }
 
-vector<int> *filter(vector<int> *d, int bisp, int boardsize){
+vector<int> *filter(vector<int> d, int bisp, int boardsize){
 	vector<int> *nd;
 	nd = new vector<int>();
 	
-	if (d == NULL){
-		int numOpcoes = boardsize * boardsize;
-		d = new vector<int>();
-		for (int i = 0; i < numOpcoes; i++){
-			printf("alocando para %d\n", i);
-			d->push_back(i);
-		}
-	}
-	
-	
-	for (vector<int>::iterator it = d->begin(); it < d->end(); ++it){
-		if (bisp > 0){
-			if ( !isDiagonal(*it, bisp, boardsize) ){
-				nd->push_back(*it);
-			}
-		} else {
+	for (vector<int>::iterator it = d.begin(); it < d.end(); ++it){
+		if ( !isDiagonal(*it, bisp, boardsize) ){
 			nd->push_back(*it);
 		}
 	}
@@ -62,17 +48,14 @@ vector<int> *filter(vector<int> *d, int bisp, int boardsize){
 	return nd;
 }
 
-void backtrack(vector<int> a, vector<int> *d, int k_bis, int n_tab, int k){
+void backtrack(vector<int> a, vector<int> d, int k_bis, int n_tab){
 	vector<int> *nd;
 	
-	//~ #ifdef DEBUG
-	printf("len %lu, poss %lu\n", a.size(), d->size());
-	//~ #endif
+	printf("len %lu, poss %lu\n", a.size(), d.size());
 	
 	if ( ((int)a.size()) == k_bis ){
 		process_solution(a);
 	} else {
-		#ifdef DEBUG
 		printf("\t\tbacktrack_prevCand { ");
 		for (vector<int>::iterator i = d.begin(); i < d.end(); i++){
 			printf("%d, ", *i);
@@ -83,17 +66,16 @@ void backtrack(vector<int> a, vector<int> *d, int k_bis, int n_tab, int k){
 			printf("%d, ", *i);
 		}
 		printf("}\n");
-		#endif
 		
-		nd = filter(d, k, n_tab);
-		for (vector<int>::iterator i = nd->begin(); i < nd->end(); i++){
-			printf("\tk= %lu, i= %d\n", a.size(), *i);
+		for (vector<int>::iterator i = d.begin(); i < d.end(); i++){
+			printf("\tk= %lud, i= %d\n", a.size(), *i);
 			
 			a.push_back(*i);
-			backtrack(a, nd, k_bis, n_tab, *i);
+			nd = filter(d, *i, n_tab);
+			backtrack(a, *nd, k_bis, n_tab);
+			delete nd;
 			a.pop_back();
 		}
-		delete nd;
 	}
 }
 
@@ -105,11 +87,11 @@ void bishops(int k_bis, int n_tab){
 	
 	int numOpcoes = n_tab * n_tab;
 	for (i = 0; i < numOpcoes; i++){
-		printf("alocando para %d\n", i);
+		//~ printf("alocando para %d\n", i);
 		d.push_back(i);
 	}
 	
-	backtrack(a, &d, k_bis, n_tab, -1);
+	backtrack(a, d, k_bis, n_tab);
 	printf("F(k_bis, n_tab) (%d, %d) = %lld\n", k_bis, n_tab, sol);
 }
 
