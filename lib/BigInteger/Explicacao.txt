@@ -1,0 +1,8 @@
+Existem 2 arquivos com a classe BigInt.
+
+O arquivo "BigInt.cpp" contem a classe BigInteger com alguns operadores 
+sobrecarregados. Foi feito depois deu enviar o problema 10213 pro UVA.
+
+O arquivo "10213.cpp" é a minha resolução do problema "How many pieces 
+of land" usando o BigInteger. Como os operadores não foram sobrecarregados, 
+o programa ficou mais chato de fazer, porém o UVA aceitou.

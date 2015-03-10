@@ -1,0 +1,4 @@
+F(k_bis, n_tab) (2, 2) = 4
+F(k_bis, n_tab) (3, 3) = 26
+F(k_bis, n_tab) (3, 4) = 8
+F(k_bis, n_tab) (4, 4) = 260
