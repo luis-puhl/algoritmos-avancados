@@ -85,8 +85,11 @@ vector<int> *filter(vector<int> *d, int bisp, int boardsize){
 	return nd;
 }
 
+
+unsigned long long int nodes = 0;
 void backtrack(vector<int> a, vector<int> *d, int k_bis, int n_tab, int k){
 	vector<int> *nd;
+	nodes++;
 	#ifdef DEBUG
 	printf("\n\tlen %lu, poss %lu\n", a.size(), d!=NULL?d->size():0);
 	
@@ -125,6 +128,7 @@ long long int bishopsDyna[65][9];
 long long int bishops(int k_bis, int n_tab){
 	vector<int> a, *d;
 	sol = 0;
+	nodes = 0;
 	d = NULL;
 	if (k_bis <= n_tab*n_tab){
 		if (bishopsDyna[k_bis][n_tab] > 0){
@@ -134,7 +138,7 @@ long long int bishops(int k_bis, int n_tab){
 		}
 	}
 	#ifdef SHOW_RESULT
-	printf("F(k_bis, n_tab) (%d, %d) = %lld\n", k_bis, n_tab, sol);
+	printf("F(k_bis, n_tab) (%d, %d) = %lld with %llu nodes\n", k_bis, n_tab, sol, nodes);
 	#endif
 	bishopsDyna[k_bis][n_tab] = sol;
 	return sol;
