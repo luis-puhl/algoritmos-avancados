@@ -39,11 +39,23 @@ vector<int> *filter(vector<int> d, int bisp, int boardsize){
 	vector<int> *nd;
 	nd = new vector<int>();
 	
+	printf("\t\tprevCand { ");
+	for (vector<int>::iterator i = d.begin(); i < d.end(); i++){
+		printf("%d, ", *i);
+	}
+	printf("}\n");
+	
 	for (vector<int>::iterator it = d.begin(); it < d.end(); ++it){
 		if ( !isDiagonal(*it, bisp, boardsize) ){
 			nd->push_back(*it);
 		}
 	}
+	
+	printf("\t\tCand { ");
+	for (vector<int>::iterator i = nd->begin(); i < nd->end(); i++){
+		printf("%d, ", *i);
+	}
+	printf("}\n");
 	
 	return nd;
 }
@@ -51,21 +63,17 @@ vector<int> *filter(vector<int> d, int bisp, int boardsize){
 void backtrack(vector<int> a, vector<int> d, int k_bis, int n_tab){
 	vector<int> *nd;
 	
-	printf("len %lu, poss %lu\n", a.size(), d.size());
+	printf("\n\tlen %lu, poss %lu\n", a.size(), d.size());
+	
+	printf("\tbacktrack_prevBisp { ");
+	for (vector<int>::iterator i = a.begin(); i < a.end(); i++){
+		printf("%d, ", *i);
+	}
+	printf("}\n");
 	
 	if ( ((int)a.size()) == k_bis ){
 		process_solution(a);
 	} else {
-		printf("\t\tbacktrack_prevCand { ");
-		for (vector<int>::iterator i = d.begin(); i < d.end(); i++){
-			printf("%d, ", *i);
-		}
-		printf("}\n");
-		printf("\t\tbacktrack_prevBisp { ");
-		for (vector<int>::iterator i = a.begin(); i < a.end(); i++){
-			printf("%d, ", *i);
-		}
-		printf("}\n");
 		
 		for (vector<int>::iterator i = d.begin(); i < d.end(); i++){
 			printf("\tk= %lud, i= %d\n", a.size(), *i);
