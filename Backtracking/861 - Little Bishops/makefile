@@ -21,3 +21,8 @@ testreaproveita: expected reaproveita.cpp
 	g++ -Wall -o "reaproveita" "reaproveita.cpp" -lm -lcrypt -O2 -std=c++11 -pipe -DONLINE_JUDGE
 	./reaproveita > out
 	diff -y expected out
+
+time: expected nova.cxx
+	g++ -Wall -o "nova" "nova.cxx" -lm -lcrypt -O2 -std=c++11 -pipe -DONLINE_JUDGE -D SHOW_RESULT
+	time ./nova > out
+	diff -y expected out
