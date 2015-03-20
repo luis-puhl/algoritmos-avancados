@@ -1,4 +1,1172 @@
-F(k_bis, n_tab) (2, 2) = 4
-F(k_bis, n_tab) (3, 3) = 26
-F(k_bis, n_tab) (3, 4) = 8
-F(k_bis, n_tab) (4, 4) = 260
+F(k_bis, n_tab) (0, 0) = 1 
+with 0 nodes
+F(k_bis, n_tab) (0, 1) = 1 
+with 0 nodes
+F(k_bis, n_tab) (0, 2) = 1 
+with 0 nodes
+F(k_bis, n_tab) (0, 3) = 1 
+with 0 nodes
+F(k_bis, n_tab) (0, 4) = 1 
+with 0 nodes
+F(k_bis, n_tab) (0, 5) = 1 
+with 0 nodes
+F(k_bis, n_tab) (0, 6) = 1 
+with 0 nodes
+F(k_bis, n_tab) (0, 7) = 1 
+with 0 nodes
+F(k_bis, n_tab) (0, 8) = 1 
+with 0 nodes
+F(k_bis, n_tab) (1, 0) = 0 
+with 0 nodes
+F(k_bis, n_tab) (1, 1) = 1 
+with 0 nodes
+F(k_bis, n_tab) (1, 2) = 4 
+with 0 nodes
+F(k_bis, n_tab) (1, 3) = 9 
+with 0 nodes
+F(k_bis, n_tab) (1, 4) = 16 
+with 0 nodes
+F(k_bis, n_tab) (1, 5) = 25 
+with 0 nodes
+F(k_bis, n_tab) (1, 6) = 36 
+with 0 nodes
+F(k_bis, n_tab) (1, 7) = 49 
+with 0 nodes
+F(k_bis, n_tab) (1, 8) = 64 
+with 0 nodes
+F(k_bis, n_tab) (2, 0) = 0 
+with 0 nodes
+F(k_bis, n_tab) (2, 1) = 0 
+with 0 nodes
+F(k_bis, n_tab) (2, 2) = 4 
+with 8 nodes
+F(k_bis, n_tab) (2, 3) = 26 
+with 35 nodes
+F(k_bis, n_tab) (2, 4) = 92 
+with 108 nodes
+F(k_bis, n_tab) (2, 5) = 240 
+with 265 nodes
+F(k_bis, n_tab) (2, 6) = 520 
+with 556 nodes
+F(k_bis, n_tab) (2, 7) = 994 
+with 1043 nodes
+F(k_bis, n_tab) (2, 8) = 1736 
+with 1800 nodes
+F(k_bis, n_tab) (3, 0) = 0 
+with 0 nodes
+F(k_bis, n_tab) (3, 1) = 0 
+with 0 nodes
+F(k_bis, n_tab) (3, 2) = 0 
+with 0 nodes
+F(k_bis, n_tab) (3, 3) = 26 
+with 54 nodes
+F(k_bis, n_tab) (3, 4) = 232 
+with 327 nodes
+F(k_bis, n_tab) (3, 5) = 1124 
+with 1368 nodes
+F(k_bis, n_tab) (3, 6) = 3896 
+with 4421 nodes
+F(k_bis, n_tab) (3, 7) = 10894 
+with 11894 nodes
+F(k_bis, n_tab) (3, 8) = 26192 
+with 27935 nodes
+F(k_bis, n_tab) (4, 0) = 0 
+with 0 nodes
+F(k_bis, n_tab) (4, 1) = 0 
+with 0 nodes
+F(k_bis, n_tab) (4, 2) = 0 
+with 0 nodes
+F(k_bis, n_tab) (4, 3) = 8 
+with 40 nodes
+F(k_bis, n_tab) (4, 4) = 260 
+with 521 nodes
+F(k_bis, n_tab) (4, 5) = 2728 
+with 3924 nodes
+F(k_bis, n_tab) (4, 6) = 16428 
+with 20462 nodes
+F(k_bis, n_tab) (4, 7) = 70792 
+with 81920 nodes
+F(k_bis, n_tab) (4, 8) = 242856 
+with 269416 nodes
+F(k_bis, n_tab) (5, 0) = 0 
+with 0 nodes
+F(k_bis, n_tab) (5, 1) = 0 
+with 0 nodes
+F(k_bis, n_tab) (5, 2) = 0 
+with 0 nodes
+F(k_bis, n_tab) (5, 3) = 0 
+with 0 nodes
+F(k_bis, n_tab) (5, 4) = 112 
+with 444 nodes
+F(k_bis, n_tab) (5, 5) = 3368 
+with 6526 nodes
+F(k_bis, n_tab) (5, 6) = 39680 
+with 57571 nodes
+F(k_bis, n_tab) (5, 7) = 282248 
+with 356721 nodes
+F(k_bis, n_tab) (5, 8) = 1444928 
+with 1695824 nodes
+F(k_bis, n_tab) (6, 0) = 0 
+with 0 nodes
+F(k_bis, n_tab) (6, 1) = 0 
+with 0 nodes
+F(k_bis, n_tab) (6, 2) = 0 
+with 0 nodes
+F(k_bis, n_tab) (6, 3) = 0 
+with 0 nodes
+F(k_bis, n_tab) (6, 4) = 16 
+with 253 nodes
+F(k_bis, n_tab) (6, 5) = 1960 
+with 6395 nodes
+F(k_bis, n_tab) (6, 6) = 53744 
+with 100680 nodes
+F(k_bis, n_tab) (6, 7) = 692320 
+with 1004733 nodes
+F(k_bis, n_tab) (6, 8) = 5599888 
+with 7140357 nodes
+F(k_bis, n_tab) (7, 0) = 0 
+with 0 nodes
+F(k_bis, n_tab) (7, 1) = 0 
+with 0 nodes
+F(k_bis, n_tab) (7, 2) = 0 
+with 0 nodes
+F(k_bis, n_tab) (7, 3) = 0 
+with 0 nodes
+F(k_bis, n_tab) (7, 4) = 0 
+with 0 nodes
+F(k_bis, n_tab) (7, 5) = 440 
+with 3958 nodes
+F(k_bis, n_tab) (7, 6) = 38368 
+with 110033 nodes
+F(k_bis, n_tab) (7, 7) = 1022320 
+with 1850505 nodes
+F(k_bis, n_tab) (7, 8) = 14082528 
+with 20357790 nodes
+F(k_bis, n_tab) (8, 0) = 0 
+with 0 nodes
+F(k_bis, n_tab) (8, 1) = 0 
+with 0 nodes
+F(k_bis, n_tab) (8, 2) = 0 
+with 0 nodes
+F(k_bis, n_tab) (8, 3) = 0 
+with 0 nodes
+F(k_bis, n_tab) (8, 4) = 0 
+with 0 nodes
+F(k_bis, n_tab) (8, 5) = 32 
+with 2124 nodes
+F(k_bis, n_tab) (8, 6) = 12944 
+with 77540 nodes
+F(k_bis, n_tab) (8, 7) = 867328 
+with 2233021 nodes
+F(k_bis, n_tab) (8, 8) = 22522960 
+with 39500830 nodes
+F(k_bis, n_tab) (9, 0) = 0 
+with 0 nodes
+F(k_bis, n_tab) (9, 1) = 0 
+with 0 nodes
+F(k_bis, n_tab) (9, 2) = 0 
+with 0 nodes
+F(k_bis, n_tab) (9, 3) = 0 
+with 0 nodes
+F(k_bis, n_tab) (9, 4) = 0 
+with 0 nodes
+F(k_bis, n_tab) (9, 5) = 0 
+with 0 nodes
+F(k_bis, n_tab) (9, 6) = 1600 
+with 42080 nodes
+F(k_bis, n_tab) (9, 7) = 389312 
+with 1780212 nodes
+F(k_bis, n_tab) (9, 8) = 22057472 
+with 52102485 nodes
+F(k_bis, n_tab) (10, 0) = 0 
+with 0 nodes
+F(k_bis, n_tab) (10, 1) = 0 
+with 0 nodes
+F(k_bis, n_tab) (10, 2) = 0 
+with 0 nodes
+F(k_bis, n_tab) (10, 3) = 0 
+with 0 nodes
+F(k_bis, n_tab) (10, 4) = 0 
+with 0 nodes
+F(k_bis, n_tab) (10, 5) = 0 
+with 0 nodes
+F(k_bis, n_tab) (10, 6) = 64 
+with 23285 nodes
+F(k_bis, n_tab) (10, 7) = 81184 
+with 1034384 nodes
+F(k_bis, n_tab) (10, 8) = 12448832 
+with 46729084 nodes
+F(k_bis, n_tab) (11, 0) = 0 
+with 0 nodes
+F(k_bis, n_tab) (11, 1) = 0 
+with 0 nodes
+F(k_bis, n_tab) (11, 2) = 0 
+with 0 nodes
+F(k_bis, n_tab) (11, 3) = 0 
+with 0 nodes
+F(k_bis, n_tab) (11, 4) = 0 
+with 0 nodes
+F(k_bis, n_tab) (11, 5) = 0 
+with 0 nodes
+F(k_bis, n_tab) (11, 6) = 0 
+with 0 nodes
+F(k_bis, n_tab) (11, 7) = 5792 
+with 558435 nodes
+F(k_bis, n_tab) (11, 8) = 3672448 
+with 29806299 nodes
+F(k_bis, n_tab) (12, 0) = 0 
+with 0 nodes
+F(k_bis, n_tab) (12, 1) = 0 
+with 0 nodes
+F(k_bis, n_tab) (12, 2) = 0 
+with 0 nodes
+F(k_bis, n_tab) (12, 3) = 0 
+with 0 nodes
+F(k_bis, n_tab) (12, 4) = 0 
+with 0 nodes
+F(k_bis, n_tab) (12, 5) = 0 
+with 0 nodes
+F(k_bis, n_tab) (12, 6) = 0 
+with 0 nodes
+F(k_bis, n_tab) (12, 7) = 128 
+with 328650 nodes
+F(k_bis, n_tab) (12, 8) = 489536 
+with 16118453 nodes
+F(k_bis, n_tab) (13, 0) = 0 
+with 0 nodes
+F(k_bis, n_tab) (13, 1) = 0 
+with 0 nodes
+F(k_bis, n_tab) (13, 2) = 0 
+with 0 nodes
+F(k_bis, n_tab) (13, 3) = 0 
+with 0 nodes
+F(k_bis, n_tab) (13, 4) = 0 
+with 0 nodes
+F(k_bis, n_tab) (13, 5) = 0 
+with 0 nodes
+F(k_bis, n_tab) (13, 6) = 0 
+with 0 nodes
+F(k_bis, n_tab) (13, 7) = 0 
+with 0 nodes
+F(k_bis, n_tab) (13, 8) = 20224 
+with 9127700 nodes
+F(k_bis, n_tab) (14, 0) = 0 
+with 0 nodes
+F(k_bis, n_tab) (14, 1) = 0 
+with 0 nodes
+F(k_bis, n_tab) (14, 2) = 0 
+with 0 nodes
+F(k_bis, n_tab) (14, 3) = 0 
+with 0 nodes
+F(k_bis, n_tab) (14, 4) = 0 
+with 0 nodes
+F(k_bis, n_tab) (14, 5) = 0 
+with 0 nodes
+F(k_bis, n_tab) (14, 6) = 0 
+with 0 nodes
+F(k_bis, n_tab) (14, 7) = 0 
+with 0 nodes
+F(k_bis, n_tab) (14, 8) = 256 
+with 5582847 nodes
+F(k_bis, n_tab) (15, 0) = 0 
+with 0 nodes
+F(k_bis, n_tab) (15, 1) = 0 
+with 0 nodes
+F(k_bis, n_tab) (15, 2) = 0 
+with 0 nodes
+F(k_bis, n_tab) (15, 3) = 0 
+with 0 nodes
+F(k_bis, n_tab) (15, 4) = 0 
+with 0 nodes
+F(k_bis, n_tab) (15, 5) = 0 
+with 0 nodes
+F(k_bis, n_tab) (15, 6) = 0 
+with 0 nodes
+F(k_bis, n_tab) (15, 7) = 0 
+with 0 nodes
+F(k_bis, n_tab) (15, 8) = 0 
+with 0 nodes
+F(k_bis, n_tab) (16, 0) = 0 
+with 0 nodes
+F(k_bis, n_tab) (16, 1) = 0 
+with 0 nodes
+F(k_bis, n_tab) (16, 2) = 0 
+with 0 nodes
+F(k_bis, n_tab) (16, 3) = 0 
+with 0 nodes
+F(k_bis, n_tab) (16, 4) = 0 
+with 0 nodes
+F(k_bis, n_tab) (16, 5) = 0 
+with 0 nodes
+F(k_bis, n_tab) (16, 6) = 0 
+with 0 nodes
+F(k_bis, n_tab) (16, 7) = 0 
+with 0 nodes
+F(k_bis, n_tab) (16, 8) = 0 
+with 0 nodes
+F(k_bis, n_tab) (17, 0) = 0 
+with 0 nodes
+F(k_bis, n_tab) (17, 1) = 0 
+with 0 nodes
+F(k_bis, n_tab) (17, 2) = 0 
+with 0 nodes
+F(k_bis, n_tab) (17, 3) = 0 
+with 0 nodes
+F(k_bis, n_tab) (17, 4) = 0 
+with 0 nodes
+F(k_bis, n_tab) (17, 5) = 0 
+with 0 nodes
+F(k_bis, n_tab) (17, 6) = 0 
+with 0 nodes
+F(k_bis, n_tab) (17, 7) = 0 
+with 0 nodes
+F(k_bis, n_tab) (17, 8) = 0 
+with 0 nodes
+F(k_bis, n_tab) (18, 0) = 0 
+with 0 nodes
+F(k_bis, n_tab) (18, 1) = 0 
+with 0 nodes
+F(k_bis, n_tab) (18, 2) = 0 
+with 0 nodes
+F(k_bis, n_tab) (18, 3) = 0 
+with 0 nodes
+F(k_bis, n_tab) (18, 4) = 0 
+with 0 nodes
+F(k_bis, n_tab) (18, 5) = 0 
+with 0 nodes
+F(k_bis, n_tab) (18, 6) = 0 
+with 0 nodes
+F(k_bis, n_tab) (18, 7) = 0 
+with 0 nodes
+F(k_bis, n_tab) (18, 8) = 0 
+with 0 nodes
+F(k_bis, n_tab) (19, 0) = 0 
+with 0 nodes
+F(k_bis, n_tab) (19, 1) = 0 
+with 0 nodes
+F(k_bis, n_tab) (19, 2) = 0 
+with 0 nodes
+F(k_bis, n_tab) (19, 3) = 0 
+with 0 nodes
+F(k_bis, n_tab) (19, 4) = 0 
+with 0 nodes
+F(k_bis, n_tab) (19, 5) = 0 
+with 0 nodes
+F(k_bis, n_tab) (19, 6) = 0 
+with 0 nodes
+F(k_bis, n_tab) (19, 7) = 0 
+with 0 nodes
+F(k_bis, n_tab) (19, 8) = 0 
+with 0 nodes
+F(k_bis, n_tab) (20, 0) = 0 
+with 0 nodes
+F(k_bis, n_tab) (20, 1) = 0 
+with 0 nodes
+F(k_bis, n_tab) (20, 2) = 0 
+with 0 nodes
+F(k_bis, n_tab) (20, 3) = 0 
+with 0 nodes
+F(k_bis, n_tab) (20, 4) = 0 
+with 0 nodes
+F(k_bis, n_tab) (20, 5) = 0 
+with 0 nodes
+F(k_bis, n_tab) (20, 6) = 0 
+with 0 nodes
+F(k_bis, n_tab) (20, 7) = 0 
+with 0 nodes
+F(k_bis, n_tab) (20, 8) = 0 
+with 0 nodes
+F(k_bis, n_tab) (21, 0) = 0 
+with 0 nodes
+F(k_bis, n_tab) (21, 1) = 0 
+with 0 nodes
+F(k_bis, n_tab) (21, 2) = 0 
+with 0 nodes
+F(k_bis, n_tab) (21, 3) = 0 
+with 0 nodes
+F(k_bis, n_tab) (21, 4) = 0 
+with 0 nodes
+F(k_bis, n_tab) (21, 5) = 0 
+with 0 nodes
+F(k_bis, n_tab) (21, 6) = 0 
+with 0 nodes
+F(k_bis, n_tab) (21, 7) = 0 
+with 0 nodes
+F(k_bis, n_tab) (21, 8) = 0 
+with 0 nodes
+F(k_bis, n_tab) (22, 0) = 0 
+with 0 nodes
+F(k_bis, n_tab) (22, 1) = 0 
+with 0 nodes
+F(k_bis, n_tab) (22, 2) = 0 
+with 0 nodes
+F(k_bis, n_tab) (22, 3) = 0 
+with 0 nodes
+F(k_bis, n_tab) (22, 4) = 0 
+with 0 nodes
+F(k_bis, n_tab) (22, 5) = 0 
+with 0 nodes
+F(k_bis, n_tab) (22, 6) = 0 
+with 0 nodes
+F(k_bis, n_tab) (22, 7) = 0 
+with 0 nodes
+F(k_bis, n_tab) (22, 8) = 0 
+with 0 nodes
+F(k_bis, n_tab) (23, 0) = 0 
+with 0 nodes
+F(k_bis, n_tab) (23, 1) = 0 
+with 0 nodes
+F(k_bis, n_tab) (23, 2) = 0 
+with 0 nodes
+F(k_bis, n_tab) (23, 3) = 0 
+with 0 nodes
+F(k_bis, n_tab) (23, 4) = 0 
+with 0 nodes
+F(k_bis, n_tab) (23, 5) = 0 
+with 0 nodes
+F(k_bis, n_tab) (23, 6) = 0 
+with 0 nodes
+F(k_bis, n_tab) (23, 7) = 0 
+with 0 nodes
+F(k_bis, n_tab) (23, 8) = 0 
+with 0 nodes
+F(k_bis, n_tab) (24, 0) = 0 
+with 0 nodes
+F(k_bis, n_tab) (24, 1) = 0 
+with 0 nodes
+F(k_bis, n_tab) (24, 2) = 0 
+with 0 nodes
+F(k_bis, n_tab) (24, 3) = 0 
+with 0 nodes
+F(k_bis, n_tab) (24, 4) = 0 
+with 0 nodes
+F(k_bis, n_tab) (24, 5) = 0 
+with 0 nodes
+F(k_bis, n_tab) (24, 6) = 0 
+with 0 nodes
+F(k_bis, n_tab) (24, 7) = 0 
+with 0 nodes
+F(k_bis, n_tab) (24, 8) = 0 
+with 0 nodes
+F(k_bis, n_tab) (25, 0) = 0 
+with 0 nodes
+F(k_bis, n_tab) (25, 1) = 0 
+with 0 nodes
+F(k_bis, n_tab) (25, 2) = 0 
+with 0 nodes
+F(k_bis, n_tab) (25, 3) = 0 
+with 0 nodes
+F(k_bis, n_tab) (25, 4) = 0 
+with 0 nodes
+F(k_bis, n_tab) (25, 5) = 0 
+with 0 nodes
+F(k_bis, n_tab) (25, 6) = 0 
+with 0 nodes
+F(k_bis, n_tab) (25, 7) = 0 
+with 0 nodes
+F(k_bis, n_tab) (25, 8) = 0 
+with 0 nodes
+F(k_bis, n_tab) (26, 0) = 0 
+with 0 nodes
+F(k_bis, n_tab) (26, 1) = 0 
+with 0 nodes
+F(k_bis, n_tab) (26, 2) = 0 
+with 0 nodes
+F(k_bis, n_tab) (26, 3) = 0 
+with 0 nodes
+F(k_bis, n_tab) (26, 4) = 0 
+with 0 nodes
+F(k_bis, n_tab) (26, 5) = 0 
+with 0 nodes
+F(k_bis, n_tab) (26, 6) = 0 
+with 0 nodes
+F(k_bis, n_tab) (26, 7) = 0 
+with 0 nodes
+F(k_bis, n_tab) (26, 8) = 0 
+with 0 nodes
+F(k_bis, n_tab) (27, 0) = 0 
+with 0 nodes
+F(k_bis, n_tab) (27, 1) = 0 
+with 0 nodes
+F(k_bis, n_tab) (27, 2) = 0 
+with 0 nodes
+F(k_bis, n_tab) (27, 3) = 0 
+with 0 nodes
+F(k_bis, n_tab) (27, 4) = 0 
+with 0 nodes
+F(k_bis, n_tab) (27, 5) = 0 
+with 0 nodes
+F(k_bis, n_tab) (27, 6) = 0 
+with 0 nodes
+F(k_bis, n_tab) (27, 7) = 0 
+with 0 nodes
+F(k_bis, n_tab) (27, 8) = 0 
+with 0 nodes
+F(k_bis, n_tab) (28, 0) = 0 
+with 0 nodes
+F(k_bis, n_tab) (28, 1) = 0 
+with 0 nodes
+F(k_bis, n_tab) (28, 2) = 0 
+with 0 nodes
+F(k_bis, n_tab) (28, 3) = 0 
+with 0 nodes
+F(k_bis, n_tab) (28, 4) = 0 
+with 0 nodes
+F(k_bis, n_tab) (28, 5) = 0 
+with 0 nodes
+F(k_bis, n_tab) (28, 6) = 0 
+with 0 nodes
+F(k_bis, n_tab) (28, 7) = 0 
+with 0 nodes
+F(k_bis, n_tab) (28, 8) = 0 
+with 0 nodes
+F(k_bis, n_tab) (29, 0) = 0 
+with 0 nodes
+F(k_bis, n_tab) (29, 1) = 0 
+with 0 nodes
+F(k_bis, n_tab) (29, 2) = 0 
+with 0 nodes
+F(k_bis, n_tab) (29, 3) = 0 
+with 0 nodes
+F(k_bis, n_tab) (29, 4) = 0 
+with 0 nodes
+F(k_bis, n_tab) (29, 5) = 0 
+with 0 nodes
+F(k_bis, n_tab) (29, 6) = 0 
+with 0 nodes
+F(k_bis, n_tab) (29, 7) = 0 
+with 0 nodes
+F(k_bis, n_tab) (29, 8) = 0 
+with 0 nodes
+F(k_bis, n_tab) (30, 0) = 0 
+with 0 nodes
+F(k_bis, n_tab) (30, 1) = 0 
+with 0 nodes
+F(k_bis, n_tab) (30, 2) = 0 
+with 0 nodes
+F(k_bis, n_tab) (30, 3) = 0 
+with 0 nodes
+F(k_bis, n_tab) (30, 4) = 0 
+with 0 nodes
+F(k_bis, n_tab) (30, 5) = 0 
+with 0 nodes
+F(k_bis, n_tab) (30, 6) = 0 
+with 0 nodes
+F(k_bis, n_tab) (30, 7) = 0 
+with 0 nodes
+F(k_bis, n_tab) (30, 8) = 0 
+with 0 nodes
+F(k_bis, n_tab) (31, 0) = 0 
+with 0 nodes
+F(k_bis, n_tab) (31, 1) = 0 
+with 0 nodes
+F(k_bis, n_tab) (31, 2) = 0 
+with 0 nodes
+F(k_bis, n_tab) (31, 3) = 0 
+with 0 nodes
+F(k_bis, n_tab) (31, 4) = 0 
+with 0 nodes
+F(k_bis, n_tab) (31, 5) = 0 
+with 0 nodes
+F(k_bis, n_tab) (31, 6) = 0 
+with 0 nodes
+F(k_bis, n_tab) (31, 7) = 0 
+with 0 nodes
+F(k_bis, n_tab) (31, 8) = 0 
+with 0 nodes
+F(k_bis, n_tab) (32, 0) = 0 
+with 0 nodes
+F(k_bis, n_tab) (32, 1) = 0 
+with 0 nodes
+F(k_bis, n_tab) (32, 2) = 0 
+with 0 nodes
+F(k_bis, n_tab) (32, 3) = 0 
+with 0 nodes
+F(k_bis, n_tab) (32, 4) = 0 
+with 0 nodes
+F(k_bis, n_tab) (32, 5) = 0 
+with 0 nodes
+F(k_bis, n_tab) (32, 6) = 0 
+with 0 nodes
+F(k_bis, n_tab) (32, 7) = 0 
+with 0 nodes
+F(k_bis, n_tab) (32, 8) = 0 
+with 0 nodes
+F(k_bis, n_tab) (33, 0) = 0 
+with 0 nodes
+F(k_bis, n_tab) (33, 1) = 0 
+with 0 nodes
+F(k_bis, n_tab) (33, 2) = 0 
+with 0 nodes
+F(k_bis, n_tab) (33, 3) = 0 
+with 0 nodes
+F(k_bis, n_tab) (33, 4) = 0 
+with 0 nodes
+F(k_bis, n_tab) (33, 5) = 0 
+with 0 nodes
+F(k_bis, n_tab) (33, 6) = 0 
+with 0 nodes
+F(k_bis, n_tab) (33, 7) = 0 
+with 0 nodes
+F(k_bis, n_tab) (33, 8) = 0 
+with 0 nodes
+F(k_bis, n_tab) (34, 0) = 0 
+with 0 nodes
+F(k_bis, n_tab) (34, 1) = 0 
+with 0 nodes
+F(k_bis, n_tab) (34, 2) = 0 
+with 0 nodes
+F(k_bis, n_tab) (34, 3) = 0 
+with 0 nodes
+F(k_bis, n_tab) (34, 4) = 0 
+with 0 nodes
+F(k_bis, n_tab) (34, 5) = 0 
+with 0 nodes
+F(k_bis, n_tab) (34, 6) = 0 
+with 0 nodes
+F(k_bis, n_tab) (34, 7) = 0 
+with 0 nodes
+F(k_bis, n_tab) (34, 8) = 0 
+with 0 nodes
+F(k_bis, n_tab) (35, 0) = 0 
+with 0 nodes
+F(k_bis, n_tab) (35, 1) = 0 
+with 0 nodes
+F(k_bis, n_tab) (35, 2) = 0 
+with 0 nodes
+F(k_bis, n_tab) (35, 3) = 0 
+with 0 nodes
+F(k_bis, n_tab) (35, 4) = 0 
+with 0 nodes
+F(k_bis, n_tab) (35, 5) = 0 
+with 0 nodes
+F(k_bis, n_tab) (35, 6) = 0 
+with 0 nodes
+F(k_bis, n_tab) (35, 7) = 0 
+with 0 nodes
+F(k_bis, n_tab) (35, 8) = 0 
+with 0 nodes
+F(k_bis, n_tab) (36, 0) = 0 
+with 0 nodes
+F(k_bis, n_tab) (36, 1) = 0 
+with 0 nodes
+F(k_bis, n_tab) (36, 2) = 0 
+with 0 nodes
+F(k_bis, n_tab) (36, 3) = 0 
+with 0 nodes
+F(k_bis, n_tab) (36, 4) = 0 
+with 0 nodes
+F(k_bis, n_tab) (36, 5) = 0 
+with 0 nodes
+F(k_bis, n_tab) (36, 6) = 0 
+with 0 nodes
+F(k_bis, n_tab) (36, 7) = 0 
+with 0 nodes
+F(k_bis, n_tab) (36, 8) = 0 
+with 0 nodes
+F(k_bis, n_tab) (37, 0) = 0 
+with 0 nodes
+F(k_bis, n_tab) (37, 1) = 0 
+with 0 nodes
+F(k_bis, n_tab) (37, 2) = 0 
+with 0 nodes
+F(k_bis, n_tab) (37, 3) = 0 
+with 0 nodes
+F(k_bis, n_tab) (37, 4) = 0 
+with 0 nodes
+F(k_bis, n_tab) (37, 5) = 0 
+with 0 nodes
+F(k_bis, n_tab) (37, 6) = 0 
+with 0 nodes
+F(k_bis, n_tab) (37, 7) = 0 
+with 0 nodes
+F(k_bis, n_tab) (37, 8) = 0 
+with 0 nodes
+F(k_bis, n_tab) (38, 0) = 0 
+with 0 nodes
+F(k_bis, n_tab) (38, 1) = 0 
+with 0 nodes
+F(k_bis, n_tab) (38, 2) = 0 
+with 0 nodes
+F(k_bis, n_tab) (38, 3) = 0 
+with 0 nodes
+F(k_bis, n_tab) (38, 4) = 0 
+with 0 nodes
+F(k_bis, n_tab) (38, 5) = 0 
+with 0 nodes
+F(k_bis, n_tab) (38, 6) = 0 
+with 0 nodes
+F(k_bis, n_tab) (38, 7) = 0 
+with 0 nodes
+F(k_bis, n_tab) (38, 8) = 0 
+with 0 nodes
+F(k_bis, n_tab) (39, 0) = 0 
+with 0 nodes
+F(k_bis, n_tab) (39, 1) = 0 
+with 0 nodes
+F(k_bis, n_tab) (39, 2) = 0 
+with 0 nodes
+F(k_bis, n_tab) (39, 3) = 0 
+with 0 nodes
+F(k_bis, n_tab) (39, 4) = 0 
+with 0 nodes
+F(k_bis, n_tab) (39, 5) = 0 
+with 0 nodes
+F(k_bis, n_tab) (39, 6) = 0 
+with 0 nodes
+F(k_bis, n_tab) (39, 7) = 0 
+with 0 nodes
+F(k_bis, n_tab) (39, 8) = 0 
+with 0 nodes
+F(k_bis, n_tab) (40, 0) = 0 
+with 0 nodes
+F(k_bis, n_tab) (40, 1) = 0 
+with 0 nodes
+F(k_bis, n_tab) (40, 2) = 0 
+with 0 nodes
+F(k_bis, n_tab) (40, 3) = 0 
+with 0 nodes
+F(k_bis, n_tab) (40, 4) = 0 
+with 0 nodes
+F(k_bis, n_tab) (40, 5) = 0 
+with 0 nodes
+F(k_bis, n_tab) (40, 6) = 0 
+with 0 nodes
+F(k_bis, n_tab) (40, 7) = 0 
+with 0 nodes
+F(k_bis, n_tab) (40, 8) = 0 
+with 0 nodes
+F(k_bis, n_tab) (41, 0) = 0 
+with 0 nodes
+F(k_bis, n_tab) (41, 1) = 0 
+with 0 nodes
+F(k_bis, n_tab) (41, 2) = 0 
+with 0 nodes
+F(k_bis, n_tab) (41, 3) = 0 
+with 0 nodes
+F(k_bis, n_tab) (41, 4) = 0 
+with 0 nodes
+F(k_bis, n_tab) (41, 5) = 0 
+with 0 nodes
+F(k_bis, n_tab) (41, 6) = 0 
+with 0 nodes
+F(k_bis, n_tab) (41, 7) = 0 
+with 0 nodes
+F(k_bis, n_tab) (41, 8) = 0 
+with 0 nodes
+F(k_bis, n_tab) (42, 0) = 0 
+with 0 nodes
+F(k_bis, n_tab) (42, 1) = 0 
+with 0 nodes
+F(k_bis, n_tab) (42, 2) = 0 
+with 0 nodes
+F(k_bis, n_tab) (42, 3) = 0 
+with 0 nodes
+F(k_bis, n_tab) (42, 4) = 0 
+with 0 nodes
+F(k_bis, n_tab) (42, 5) = 0 
+with 0 nodes
+F(k_bis, n_tab) (42, 6) = 0 
+with 0 nodes
+F(k_bis, n_tab) (42, 7) = 0 
+with 0 nodes
+F(k_bis, n_tab) (42, 8) = 0 
+with 0 nodes
+F(k_bis, n_tab) (43, 0) = 0 
+with 0 nodes
+F(k_bis, n_tab) (43, 1) = 0 
+with 0 nodes
+F(k_bis, n_tab) (43, 2) = 0 
+with 0 nodes
+F(k_bis, n_tab) (43, 3) = 0 
+with 0 nodes
+F(k_bis, n_tab) (43, 4) = 0 
+with 0 nodes
+F(k_bis, n_tab) (43, 5) = 0 
+with 0 nodes
+F(k_bis, n_tab) (43, 6) = 0 
+with 0 nodes
+F(k_bis, n_tab) (43, 7) = 0 
+with 0 nodes
+F(k_bis, n_tab) (43, 8) = 0 
+with 0 nodes
+F(k_bis, n_tab) (44, 0) = 0 
+with 0 nodes
+F(k_bis, n_tab) (44, 1) = 0 
+with 0 nodes
+F(k_bis, n_tab) (44, 2) = 0 
+with 0 nodes
+F(k_bis, n_tab) (44, 3) = 0 
+with 0 nodes
+F(k_bis, n_tab) (44, 4) = 0 
+with 0 nodes
+F(k_bis, n_tab) (44, 5) = 0 
+with 0 nodes
+F(k_bis, n_tab) (44, 6) = 0 
+with 0 nodes
+F(k_bis, n_tab) (44, 7) = 0 
+with 0 nodes
+F(k_bis, n_tab) (44, 8) = 0 
+with 0 nodes
+F(k_bis, n_tab) (45, 0) = 0 
+with 0 nodes
+F(k_bis, n_tab) (45, 1) = 0 
+with 0 nodes
+F(k_bis, n_tab) (45, 2) = 0 
+with 0 nodes
+F(k_bis, n_tab) (45, 3) = 0 
+with 0 nodes
+F(k_bis, n_tab) (45, 4) = 0 
+with 0 nodes
+F(k_bis, n_tab) (45, 5) = 0 
+with 0 nodes
+F(k_bis, n_tab) (45, 6) = 0 
+with 0 nodes
+F(k_bis, n_tab) (45, 7) = 0 
+with 0 nodes
+F(k_bis, n_tab) (45, 8) = 0 
+with 0 nodes
+F(k_bis, n_tab) (46, 0) = 0 
+with 0 nodes
+F(k_bis, n_tab) (46, 1) = 0 
+with 0 nodes
+F(k_bis, n_tab) (46, 2) = 0 
+with 0 nodes
+F(k_bis, n_tab) (46, 3) = 0 
+with 0 nodes
+F(k_bis, n_tab) (46, 4) = 0 
+with 0 nodes
+F(k_bis, n_tab) (46, 5) = 0 
+with 0 nodes
+F(k_bis, n_tab) (46, 6) = 0 
+with 0 nodes
+F(k_bis, n_tab) (46, 7) = 0 
+with 0 nodes
+F(k_bis, n_tab) (46, 8) = 0 
+with 0 nodes
+F(k_bis, n_tab) (47, 0) = 0 
+with 0 nodes
+F(k_bis, n_tab) (47, 1) = 0 
+with 0 nodes
+F(k_bis, n_tab) (47, 2) = 0 
+with 0 nodes
+F(k_bis, n_tab) (47, 3) = 0 
+with 0 nodes
+F(k_bis, n_tab) (47, 4) = 0 
+with 0 nodes
+F(k_bis, n_tab) (47, 5) = 0 
+with 0 nodes
+F(k_bis, n_tab) (47, 6) = 0 
+with 0 nodes
+F(k_bis, n_tab) (47, 7) = 0 
+with 0 nodes
+F(k_bis, n_tab) (47, 8) = 0 
+with 0 nodes
+F(k_bis, n_tab) (48, 0) = 0 
+with 0 nodes
+F(k_bis, n_tab) (48, 1) = 0 
+with 0 nodes
+F(k_bis, n_tab) (48, 2) = 0 
+with 0 nodes
+F(k_bis, n_tab) (48, 3) = 0 
+with 0 nodes
+F(k_bis, n_tab) (48, 4) = 0 
+with 0 nodes
+F(k_bis, n_tab) (48, 5) = 0 
+with 0 nodes
+F(k_bis, n_tab) (48, 6) = 0 
+with 0 nodes
+F(k_bis, n_tab) (48, 7) = 0 
+with 0 nodes
+F(k_bis, n_tab) (48, 8) = 0 
+with 0 nodes
+F(k_bis, n_tab) (49, 0) = 0 
+with 0 nodes
+F(k_bis, n_tab) (49, 1) = 0 
+with 0 nodes
+F(k_bis, n_tab) (49, 2) = 0 
+with 0 nodes
+F(k_bis, n_tab) (49, 3) = 0 
+with 0 nodes
+F(k_bis, n_tab) (49, 4) = 0 
+with 0 nodes
+F(k_bis, n_tab) (49, 5) = 0 
+with 0 nodes
+F(k_bis, n_tab) (49, 6) = 0 
+with 0 nodes
+F(k_bis, n_tab) (49, 7) = 0 
+with 0 nodes
+F(k_bis, n_tab) (49, 8) = 0 
+with 0 nodes
+F(k_bis, n_tab) (50, 0) = 0 
+with 0 nodes
+F(k_bis, n_tab) (50, 1) = 0 
+with 0 nodes
+F(k_bis, n_tab) (50, 2) = 0 
+with 0 nodes
+F(k_bis, n_tab) (50, 3) = 0 
+with 0 nodes
+F(k_bis, n_tab) (50, 4) = 0 
+with 0 nodes
+F(k_bis, n_tab) (50, 5) = 0 
+with 0 nodes
+F(k_bis, n_tab) (50, 6) = 0 
+with 0 nodes
+F(k_bis, n_tab) (50, 7) = 0 
+with 0 nodes
+F(k_bis, n_tab) (50, 8) = 0 
+with 0 nodes
+F(k_bis, n_tab) (51, 0) = 0 
+with 0 nodes
+F(k_bis, n_tab) (51, 1) = 0 
+with 0 nodes
+F(k_bis, n_tab) (51, 2) = 0 
+with 0 nodes
+F(k_bis, n_tab) (51, 3) = 0 
+with 0 nodes
+F(k_bis, n_tab) (51, 4) = 0 
+with 0 nodes
+F(k_bis, n_tab) (51, 5) = 0 
+with 0 nodes
+F(k_bis, n_tab) (51, 6) = 0 
+with 0 nodes
+F(k_bis, n_tab) (51, 7) = 0 
+with 0 nodes
+F(k_bis, n_tab) (51, 8) = 0 
+with 0 nodes
+F(k_bis, n_tab) (52, 0) = 0 
+with 0 nodes
+F(k_bis, n_tab) (52, 1) = 0 
+with 0 nodes
+F(k_bis, n_tab) (52, 2) = 0 
+with 0 nodes
+F(k_bis, n_tab) (52, 3) = 0 
+with 0 nodes
+F(k_bis, n_tab) (52, 4) = 0 
+with 0 nodes
+F(k_bis, n_tab) (52, 5) = 0 
+with 0 nodes
+F(k_bis, n_tab) (52, 6) = 0 
+with 0 nodes
+F(k_bis, n_tab) (52, 7) = 0 
+with 0 nodes
+F(k_bis, n_tab) (52, 8) = 0 
+with 0 nodes
+F(k_bis, n_tab) (53, 0) = 0 
+with 0 nodes
+F(k_bis, n_tab) (53, 1) = 0 
+with 0 nodes
+F(k_bis, n_tab) (53, 2) = 0 
+with 0 nodes
+F(k_bis, n_tab) (53, 3) = 0 
+with 0 nodes
+F(k_bis, n_tab) (53, 4) = 0 
+with 0 nodes
+F(k_bis, n_tab) (53, 5) = 0 
+with 0 nodes
+F(k_bis, n_tab) (53, 6) = 0 
+with 0 nodes
+F(k_bis, n_tab) (53, 7) = 0 
+with 0 nodes
+F(k_bis, n_tab) (53, 8) = 0 
+with 0 nodes
+F(k_bis, n_tab) (54, 0) = 0 
+with 0 nodes
+F(k_bis, n_tab) (54, 1) = 0 
+with 0 nodes
+F(k_bis, n_tab) (54, 2) = 0 
+with 0 nodes
+F(k_bis, n_tab) (54, 3) = 0 
+with 0 nodes
+F(k_bis, n_tab) (54, 4) = 0 
+with 0 nodes
+F(k_bis, n_tab) (54, 5) = 0 
+with 0 nodes
+F(k_bis, n_tab) (54, 6) = 0 
+with 0 nodes
+F(k_bis, n_tab) (54, 7) = 0 
+with 0 nodes
+F(k_bis, n_tab) (54, 8) = 0 
+with 0 nodes
+F(k_bis, n_tab) (55, 0) = 0 
+with 0 nodes
+F(k_bis, n_tab) (55, 1) = 0 
+with 0 nodes
+F(k_bis, n_tab) (55, 2) = 0 
+with 0 nodes
+F(k_bis, n_tab) (55, 3) = 0 
+with 0 nodes
+F(k_bis, n_tab) (55, 4) = 0 
+with 0 nodes
+F(k_bis, n_tab) (55, 5) = 0 
+with 0 nodes
+F(k_bis, n_tab) (55, 6) = 0 
+with 0 nodes
+F(k_bis, n_tab) (55, 7) = 0 
+with 0 nodes
+F(k_bis, n_tab) (55, 8) = 0 
+with 0 nodes
+F(k_bis, n_tab) (56, 0) = 0 
+with 0 nodes
+F(k_bis, n_tab) (56, 1) = 0 
+with 0 nodes
+F(k_bis, n_tab) (56, 2) = 0 
+with 0 nodes
+F(k_bis, n_tab) (56, 3) = 0 
+with 0 nodes
+F(k_bis, n_tab) (56, 4) = 0 
+with 0 nodes
+F(k_bis, n_tab) (56, 5) = 0 
+with 0 nodes
+F(k_bis, n_tab) (56, 6) = 0 
+with 0 nodes
+F(k_bis, n_tab) (56, 7) = 0 
+with 0 nodes
+F(k_bis, n_tab) (56, 8) = 0 
+with 0 nodes
+F(k_bis, n_tab) (57, 0) = 0 
+with 0 nodes
+F(k_bis, n_tab) (57, 1) = 0 
+with 0 nodes
+F(k_bis, n_tab) (57, 2) = 0 
+with 0 nodes
+F(k_bis, n_tab) (57, 3) = 0 
+with 0 nodes
+F(k_bis, n_tab) (57, 4) = 0 
+with 0 nodes
+F(k_bis, n_tab) (57, 5) = 0 
+with 0 nodes
+F(k_bis, n_tab) (57, 6) = 0 
+with 0 nodes
+F(k_bis, n_tab) (57, 7) = 0 
+with 0 nodes
+F(k_bis, n_tab) (57, 8) = 0 
+with 0 nodes
+F(k_bis, n_tab) (58, 0) = 0 
+with 0 nodes
+F(k_bis, n_tab) (58, 1) = 0 
+with 0 nodes
+F(k_bis, n_tab) (58, 2) = 0 
+with 0 nodes
+F(k_bis, n_tab) (58, 3) = 0 
+with 0 nodes
+F(k_bis, n_tab) (58, 4) = 0 
+with 0 nodes
+F(k_bis, n_tab) (58, 5) = 0 
+with 0 nodes
+F(k_bis, n_tab) (58, 6) = 0 
+with 0 nodes
+F(k_bis, n_tab) (58, 7) = 0 
+with 0 nodes
+F(k_bis, n_tab) (58, 8) = 0 
+with 0 nodes
+F(k_bis, n_tab) (59, 0) = 0 
+with 0 nodes
+F(k_bis, n_tab) (59, 1) = 0 
+with 0 nodes
+F(k_bis, n_tab) (59, 2) = 0 
+with 0 nodes
+F(k_bis, n_tab) (59, 3) = 0 
+with 0 nodes
+F(k_bis, n_tab) (59, 4) = 0 
+with 0 nodes
+F(k_bis, n_tab) (59, 5) = 0 
+with 0 nodes
+F(k_bis, n_tab) (59, 6) = 0 
+with 0 nodes
+F(k_bis, n_tab) (59, 7) = 0 
+with 0 nodes
+F(k_bis, n_tab) (59, 8) = 0 
+with 0 nodes
+F(k_bis, n_tab) (60, 0) = 0 
+with 0 nodes
+F(k_bis, n_tab) (60, 1) = 0 
+with 0 nodes
+F(k_bis, n_tab) (60, 2) = 0 
+with 0 nodes
+F(k_bis, n_tab) (60, 3) = 0 
+with 0 nodes
+F(k_bis, n_tab) (60, 4) = 0 
+with 0 nodes
+F(k_bis, n_tab) (60, 5) = 0 
+with 0 nodes
+F(k_bis, n_tab) (60, 6) = 0 
+with 0 nodes
+F(k_bis, n_tab) (60, 7) = 0 
+with 0 nodes
+F(k_bis, n_tab) (60, 8) = 0 
+with 0 nodes
+F(k_bis, n_tab) (61, 0) = 0 
+with 0 nodes
+F(k_bis, n_tab) (61, 1) = 0 
+with 0 nodes
+F(k_bis, n_tab) (61, 2) = 0 
+with 0 nodes
+F(k_bis, n_tab) (61, 3) = 0 
+with 0 nodes
+F(k_bis, n_tab) (61, 4) = 0 
+with 0 nodes
+F(k_bis, n_tab) (61, 5) = 0 
+with 0 nodes
+F(k_bis, n_tab) (61, 6) = 0 
+with 0 nodes
+F(k_bis, n_tab) (61, 7) = 0 
+with 0 nodes
+F(k_bis, n_tab) (61, 8) = 0 
+with 0 nodes
+F(k_bis, n_tab) (62, 0) = 0 
+with 0 nodes
+F(k_bis, n_tab) (62, 1) = 0 
+with 0 nodes
+F(k_bis, n_tab) (62, 2) = 0 
+with 0 nodes
+F(k_bis, n_tab) (62, 3) = 0 
+with 0 nodes
+F(k_bis, n_tab) (62, 4) = 0 
+with 0 nodes
+F(k_bis, n_tab) (62, 5) = 0 
+with 0 nodes
+F(k_bis, n_tab) (62, 6) = 0 
+with 0 nodes
+F(k_bis, n_tab) (62, 7) = 0 
+with 0 nodes
+F(k_bis, n_tab) (62, 8) = 0 
+with 0 nodes
+F(k_bis, n_tab) (63, 0) = 0 
+with 0 nodes
+F(k_bis, n_tab) (63, 1) = 0 
+with 0 nodes
+F(k_bis, n_tab) (63, 2) = 0 
+with 0 nodes
+F(k_bis, n_tab) (63, 3) = 0 
+with 0 nodes
+F(k_bis, n_tab) (63, 4) = 0 
+with 0 nodes
+F(k_bis, n_tab) (63, 5) = 0 
+with 0 nodes
+F(k_bis, n_tab) (63, 6) = 0 
+with 0 nodes
+F(k_bis, n_tab) (63, 7) = 0 
+with 0 nodes
+F(k_bis, n_tab) (63, 8) = 0 
+with 0 nodes
+F(k_bis, n_tab) (64, 0) = 0 
+with 0 nodes
+F(k_bis, n_tab) (64, 1) = 0 
+with 0 nodes
+F(k_bis, n_tab) (64, 2) = 0 
+with 0 nodes
+F(k_bis, n_tab) (64, 3) = 0 
+with 0 nodes
+F(k_bis, n_tab) (64, 4) = 0 
+with 0 nodes
+F(k_bis, n_tab) (64, 5) = 0 
+with 0 nodes
+F(k_bis, n_tab) (64, 6) = 0 
+with 0 nodes
+F(k_bis, n_tab) (64, 7) = 0 
+with 0 nodes
+F(k_bis, n_tab) (64, 8) = 0 
+with 0 nodes
+
+unsigned int bishopsDyna[65][9] = { 1 ,  1 ,  1 ,  1 ,  1 ,  1 ,  1 ,  1 ,  1  0 ,  1 ,  4 ,  9 ,  16 ,  25 ,  36 ,  49 ,  64  0 ,  0 ,  4 ,  26 ,  92 ,  240 ,  520 ,  994 ,  1736  0 ,  0 ,  0 ,  26 ,  232 ,  1124 ,  3896 ,  10894 ,  26192  0 ,  0 ,  0 ,  8 ,  260 ,  2728 ,  16428 ,  70792 ,  242856  0 ,  0 ,  0 ,  0 ,  112 ,  3368 ,  39680 ,  282248 ,  1444928  0 ,  0 ,  0 ,  0 ,  16 ,  1960 ,  53744 ,  692320 ,  5599888  0 ,  0 ,  0 ,  0 ,  0 ,  440 ,  38368 ,  1022320 ,  14082528  0 ,  0 ,  0 ,  0 ,  0 ,  32 ,  12944 ,  867328 ,  22522960  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  1600 ,  389312 ,  22057472  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  64 ,  81184 ,  12448832  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  5792 ,  3672448  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  128 ,  489536  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  20224  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  256  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0 ,  0  0  0  0  0  0  0  0  0  0 };

@@ -1,0 +1,288 @@
+F(k_bis, n_tab) (0, 0) = 1 
+with 0 nodes
+F(k_bis, n_tab) (0, 1) = 1 
+with 0 nodes
+F(k_bis, n_tab) (0, 2) = 1 
+with 0 nodes
+F(k_bis, n_tab) (0, 3) = 1 
+with 0 nodes
+F(k_bis, n_tab) (0, 4) = 1 
+with 0 nodes
+F(k_bis, n_tab) (0, 5) = 1 
+with 0 nodes
+F(k_bis, n_tab) (0, 6) = 1 
+with 0 nodes
+F(k_bis, n_tab) (0, 7) = 1 
+with 0 nodes
+F(k_bis, n_tab) (0, 8) = 1 
+with 0 nodes
+F(k_bis, n_tab) (1, 0) = 0 
+with 0 nodes
+F(k_bis, n_tab) (1, 1) = 1 
+with 0 nodes
+F(k_bis, n_tab) (1, 2) = 4 
+with 0 nodes
+F(k_bis, n_tab) (1, 3) = 9 
+with 0 nodes
+F(k_bis, n_tab) (1, 4) = 16 
+with 0 nodes
+F(k_bis, n_tab) (1, 5) = 25 
+with 0 nodes
+F(k_bis, n_tab) (1, 6) = 36 
+with 0 nodes
+F(k_bis, n_tab) (1, 7) = 49 
+with 0 nodes
+F(k_bis, n_tab) (1, 8) = 64 
+with 0 nodes
+F(k_bis, n_tab) (2, 0) = 0 
+with 0 nodes
+F(k_bis, n_tab) (2, 1) = 0 
+with 0 nodes
+F(k_bis, n_tab) (2, 2) = 4 
+with 4 nodes
+F(k_bis, n_tab) (2, 3) = 26 
+with 9 nodes
+F(k_bis, n_tab) (2, 4) = 92 
+with 16 nodes
+F(k_bis, n_tab) (2, 5) = 240 
+with 25 nodes
+F(k_bis, n_tab) (2, 6) = 520 
+with 36 nodes
+F(k_bis, n_tab) (2, 7) = 994 
+with 49 nodes
+F(k_bis, n_tab) (2, 8) = 1736 
+with 64 nodes
+F(k_bis, n_tab) (3, 0) = 0 
+with 0 nodes
+F(k_bis, n_tab) (3, 1) = 0 
+with 0 nodes
+F(k_bis, n_tab) (3, 2) = 0 
+with 0 nodes
+F(k_bis, n_tab) (3, 3) = 26 
+with 28 nodes
+F(k_bis, n_tab) (3, 4) = 232 
+with 95 nodes
+F(k_bis, n_tab) (3, 5) = 1124 
+with 244 nodes
+F(k_bis, n_tab) (3, 6) = 3896 
+with 525 nodes
+F(k_bis, n_tab) (3, 7) = 10894 
+with 1000 nodes
+F(k_bis, n_tab) (3, 8) = 26192 
+with 1743 nodes
+F(k_bis, n_tab) (4, 0) = 0 
+with 0 nodes
+F(k_bis, n_tab) (4, 1) = 0 
+with 0 nodes
+F(k_bis, n_tab) (4, 2) = 0 
+with 0 nodes
+F(k_bis, n_tab) (4, 3) = 8 
+with 32 nodes
+F(k_bis, n_tab) (4, 4) = 260 
+with 261 nodes
+F(k_bis, n_tab) (4, 5) = 2728 
+with 1196 nodes
+F(k_bis, n_tab) (4, 6) = 16428 
+with 4034 nodes
+F(k_bis, n_tab) (4, 7) = 70792 
+with 11128 nodes
+F(k_bis, n_tab) (4, 8) = 242856 
+with 26560 nodes
+F(k_bis, n_tab) (5, 0) = 0 
+with 0 nodes
+F(k_bis, n_tab) (5, 1) = 0 
+with 0 nodes
+F(k_bis, n_tab) (5, 2) = 0 
+with 0 nodes
+F(k_bis, n_tab) (5, 3) = 0 
+with 0 nodes
+F(k_bis, n_tab) (5, 4) = 112 
+with 332 nodes
+F(k_bis, n_tab) (5, 5) = 3368 
+with 3158 nodes
+F(k_bis, n_tab) (5, 6) = 39680 
+with 17891 nodes
+F(k_bis, n_tab) (5, 7) = 282248 
+with 74473 nodes
+F(k_bis, n_tab) (5, 8) = 1444928 
+with 250896 nodes
+F(k_bis, n_tab) (6, 0) = 0 
+with 0 nodes
+F(k_bis, n_tab) (6, 1) = 0 
+with 0 nodes
+F(k_bis, n_tab) (6, 2) = 0 
+with 0 nodes
+F(k_bis, n_tab) (6, 3) = 0 
+with 0 nodes
+F(k_bis, n_tab) (6, 4) = 16 
+with 237 nodes
+F(k_bis, n_tab) (6, 5) = 1960 
+with 4435 nodes
+F(k_bis, n_tab) (6, 6) = 53744 
+with 46936 nodes
+F(k_bis, n_tab) (6, 7) = 692320 
+with 312413 nodes
+F(k_bis, n_tab) (6, 8) = 5599888 
+with 1540469 nodes
+F(k_bis, n_tab) (7, 0) = 0 
+with 0 nodes
+F(k_bis, n_tab) (7, 1) = 0 
+with 0 nodes
+F(k_bis, n_tab) (7, 2) = 0 
+with 0 nodes
+F(k_bis, n_tab) (7, 3) = 0 
+with 0 nodes
+F(k_bis, n_tab) (7, 4) = 0 
+with 0 nodes
+F(k_bis, n_tab) (7, 5) = 440 
+with 3518 nodes
+F(k_bis, n_tab) (7, 6) = 38368 
+with 71665 nodes
+F(k_bis, n_tab) (7, 7) = 1022320 
+with 828185 nodes
+F(k_bis, n_tab) (7, 8) = 14082528 
+with 6275262 nodes
+F(k_bis, n_tab) (8, 0) = 0 
+with 0 nodes
+F(k_bis, n_tab) (8, 1) = 0 
+with 0 nodes
+F(k_bis, n_tab) (8, 2) = 0 
+with 0 nodes
+F(k_bis, n_tab) (8, 3) = 0 
+with 0 nodes
+F(k_bis, n_tab) (8, 4) = 0 
+with 0 nodes
+F(k_bis, n_tab) (8, 5) = 32 
+with 2092 nodes
+F(k_bis, n_tab) (8, 6) = 12944 
+with 64596 nodes
+F(k_bis, n_tab) (8, 7) = 867328 
+with 1365693 nodes
+F(k_bis, n_tab) (8, 8) = 22522960 
+with 16977870 nodes
+F(k_bis, n_tab) (9, 0) = 0 
+with 0 nodes
+F(k_bis, n_tab) (9, 1) = 0 
+with 0 nodes
+F(k_bis, n_tab) (9, 2) = 0 
+with 0 nodes
+F(k_bis, n_tab) (9, 3) = 0 
+with 0 nodes
+F(k_bis, n_tab) (9, 4) = 0 
+with 0 nodes
+F(k_bis, n_tab) (9, 5) = 0 
+with 0 nodes
+F(k_bis, n_tab) (9, 6) = 1600 
+with 40480 nodes
+F(k_bis, n_tab) (9, 7) = 389312 
+with 1390900 nodes
+F(k_bis, n_tab) (9, 8) = 22057472 
+with 30045013 nodes
+F(k_bis, n_tab) (10, 0) = 0 
+with 0 nodes
+F(k_bis, n_tab) (10, 1) = 0 
+with 0 nodes
+F(k_bis, n_tab) (10, 2) = 0 
+with 0 nodes
+F(k_bis, n_tab) (10, 3) = 0 
+with 0 nodes
+F(k_bis, n_tab) (10, 4) = 0 
+with 0 nodes
+F(k_bis, n_tab) (10, 5) = 0 
+with 0 nodes
+F(k_bis, n_tab) (10, 6) = 64 
+with 23221 nodes
+F(k_bis, n_tab) (10, 7) = 81184 
+with 953200 nodes
+F(k_bis, n_tab) (10, 8) = 12448832 
+with 34280252 nodes
+F(k_bis, n_tab) (11, 0) = 0 
+with 0 nodes
+F(k_bis, n_tab) (11, 1) = 0 
+with 0 nodes
+F(k_bis, n_tab) (11, 2) = 0 
+with 0 nodes
+F(k_bis, n_tab) (11, 3) = 0 
+with 0 nodes
+F(k_bis, n_tab) (11, 4) = 0 
+with 0 nodes
+F(k_bis, n_tab) (11, 5) = 0 
+with 0 nodes
+F(k_bis, n_tab) (11, 6) = 0 
+with 0 nodes
+F(k_bis, n_tab) (11, 7) = 5792 
+with 552643 nodes
+F(k_bis, n_tab) (11, 8) = 3672448 
+with 26133851 nodes
+F(k_bis, n_tab) (12, 0) = 0 
+with 0 nodes
+F(k_bis, n_tab) (12, 1) = 0 
+with 0 nodes
+F(k_bis, n_tab) (12, 2) = 0 
+with 0 nodes
+F(k_bis, n_tab) (12, 3) = 0 
+with 0 nodes
+F(k_bis, n_tab) (12, 4) = 0 
+with 0 nodes
+F(k_bis, n_tab) (12, 5) = 0 
+with 0 nodes
+F(k_bis, n_tab) (12, 6) = 0 
+with 0 nodes
+F(k_bis, n_tab) (12, 7) = 128 
+with 328522 nodes
+F(k_bis, n_tab) (12, 8) = 489536 
+with 15628917 nodes
+F(k_bis, n_tab) (13, 0) = 0 
+with 0 nodes
+F(k_bis, n_tab) (13, 1) = 0 
+with 0 nodes
+F(k_bis, n_tab) (13, 2) = 0 
+with 0 nodes
+F(k_bis, n_tab) (13, 3) = 0 
+with 0 nodes
+F(k_bis, n_tab) (13, 4) = 0 
+with 0 nodes
+F(k_bis, n_tab) (13, 5) = 0 
+with 0 nodes
+F(k_bis, n_tab) (13, 6) = 0 
+with 0 nodes
+F(k_bis, n_tab) (13, 7) = 0 
+with 0 nodes
+F(k_bis, n_tab) (13, 8) = 20224 
+with 9107476 nodes
+F(k_bis, n_tab) (14, 0) = 0 
+with 0 nodes
+F(k_bis, n_tab) (14, 1) = 0 
+with 0 nodes
+F(k_bis, n_tab) (14, 2) = 0 
+with 0 nodes
+F(k_bis, n_tab) (14, 3) = 0 
+with 0 nodes
+F(k_bis, n_tab) (14, 4) = 0 
+with 0 nodes
+F(k_bis, n_tab) (14, 5) = 0 
+with 0 nodes
+F(k_bis, n_tab) (14, 6) = 0 
+with 0 nodes
+F(k_bis, n_tab) (14, 7) = 0 
+with 0 nodes
+F(k_bis, n_tab) (14, 8) = 256 
+with 5582591 nodes
+
+unsigned int bishopsDyna[15][9] = {1, 1, 1, 1, 1, 1, 1, 1, 1
+0, 1, 4, 9, 16, 25, 36, 49, 64
+0, 0, 4, 26, 92, 240, 520, 994, 1736
+0, 0, 0, 26, 232, 1124, 3896, 10894, 26192
+0, 0, 0, 8, 260, 2728, 16428, 70792, 242856
+0, 0, 0, 0, 112, 3368, 39680, 282248, 1444928
+0, 0, 0, 0, 16, 1960, 53744, 692320, 5599888
+0, 0, 0, 0, 0, 440, 38368, 1022320, 14082528
+0, 0, 0, 0, 0, 32, 12944, 867328, 22522960
+0, 0, 0, 0, 0, 0, 1600, 389312, 22057472
+0, 0, 0, 0, 0, 0, 64, 81184, 12448832
+0, 0, 0, 0, 0, 0, 0, 5792, 3672448
+0, 0, 0, 0, 0, 0, 0, 128, 489536
+0, 0, 0, 0, 0, 0, 0, 0, 20224
+0, 0, 0, 0, 0, 0, 0, 0, 256
+000000000
+};
