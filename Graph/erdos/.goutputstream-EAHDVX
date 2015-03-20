@@ -1,0 +1,103 @@
+#include <stdio.h>
+#include <iostream>
+#include <stdlib.h>
+#include <vector>
+#include <cmath>
+
+using namespace std;
+
+class Author {
+	
+};
+
+class Paper {
+	private:
+	char name[50], lname[20], fname[20];
+	
+	char * extractAuthor(char *paperAuthors, char *name, char *fname, char *lname){
+		int i = 0;
+		int namePtr = 0, lnamePtr = 0, fnamePtr = 0;
+		
+		// lname
+		while (paperAuthors[i] != ',') {
+			name[namePtr] = paperAuthors[i];
+			lname[lnamePtr] = paperAuthors[i];
+			
+			namePtr++;
+			lnamePtr++;
+			i++;
+		}
+		// spaces
+		while (paperAuthors[i] == ' ' || paperAuthors[i] == ',') {
+			name[namePtr++] = paperAuthors[i++];
+		}
+		// fname
+		while (paperAuthors[i] != ',' || paperAuthors[i] != ':') {
+			name[namePtr] = paperAuthors[i];
+			fname[fnamePtr] = paperAuthors[i];
+			
+			namePtr++;
+			fnamePtr++;
+			i++;
+		}
+		
+		name[namePtr] = '\0';
+		lname[lnamePtr] = '\0';
+		fname[fnamePtr] = '\0';
+		
+		return &(paperAuthors[i]);
+	}
+	
+	public:
+	Paper(char *paperAuthors){
+		char name[50], lname[30], fname[20];
+		
+		while (paperAuthors[0] != '\0') {
+			paperAuthors = extractAuthor(paperAuthors, name, fname, lname);
+			
+			printf("%s => %s, %s\n", name, fname, lname);
+		}
+		
+	}
+	
+};
+
+int main(int argc, char **argv){
+	int scenarios, papers, names;
+	int scenario, paper, name;
+	
+	scanf("%d", &scenarios);
+	printf("scenarios %d\n", scenarios);
+	for (scenario = 1; scenario <= scenarios; scenario++){
+		scanf("%d %d", &papers, &names);
+		printf("papers %d\t names %d\n", papers, names);
+		
+		for (paper = 1; paper <= papers ; paper++){
+			// scan papers
+			char paperAuthors[200];
+			
+			// Smith, M.N., Martin, G., Erdos, P.: Newtonian forms of prime factor matrices
+			scanf("%[^:]s: %*[^\n]s\n", paperAuthors);
+			printf("paperAuthors %s\n", paperAuthors);
+			// paperAuthors = "Smith, M.N., Martin, G., Erdos, P."
+			
+			/**
+			Smith, M.N., Martin, G., Erdos, P.: Newtonian forms of prime factor matrices
+			Erdos, P., Reisig, W.: Stuttering in petri nets
+			Smith, M.N., Chen, X.: First oder derivates in structured programming
+			Jablonski, T., Hsueh, Z.: Selfstabilizing data structures
+			*/
+			
+			new Paper(paperAuthors);
+			
+		}
+		
+		printf("Scenario %d\n", scenario);
+		for (name = 1; name <= names; name++){
+			// scan names
+		}
+		
+	}
+	
+	return 0;
+}
