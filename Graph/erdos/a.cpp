@@ -1,20 +1,21 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <ctype.h>
 
-#include <iostream>
-#include <vector>
-#include <cmath>
+//~ #include <iostream>
+//~ #include <vector>
+//~ #include <cmath>
 #include <queue>
 
 using namespace std;
 int erdosRunner(int target);
 
-#define MAP_MULTI  36
-#define MAX_MAP 36 * MAP_MULTI
-#define SHORT_NAME 40
+#define MAP_MULTI  140
+#define MAX_MAP 360 * MAP_MULTI
+#define SHORT_NAME 41
 #define LONG_NAME 2*SHORT_NAME + 20
-#define MAX_PAPER_AUTHORS 100
+#define MAX_PAPER_AUTHORS 101
 
 class Author {
 	public:
@@ -29,6 +30,9 @@ class Author {
 	
 	char name[LONG_NAME], lname[SHORT_NAME], fname[SHORT_NAME];
 	Author (char *name, char *lname, char *fname){
+		if (strlen(lname) == 0 || strlen(fname) == 0){
+			throw 1;
+		}
 		this->id = this->idCounter++;
 		strcpy(this->name, name);
 		strcpy(this->lname, lname);
@@ -188,15 +192,21 @@ char * explodeName(char *paperAuthors, char *name, char *fname, char *lname){
 		i++;
 		switch (paperAuthors[i]){
 			case ',':
-			case ' ':
+			//~ case ' ':
 			break;
 			default: flag = 0;
 		}
 	} while (flag);
 	
+	while (paperAuthors[i] == ' '){
+		name[namePtr] = paperAuthors[i];
+		namePtr++;
+		i++;
+	}
+	
 	// lname
 	while (paperAuthors[i] != ',' && paperAuthors[i] != '\0') {
-		//~ printf("\tlname\n");
+		printf("\tlname\n");
 		name[namePtr] = paperAuthors[i];
 		lname[lnamePtr] = paperAuthors[i];
 		
@@ -206,14 +216,14 @@ char * explodeName(char *paperAuthors, char *name, char *fname, char *lname){
 	}
 	// spaces
 	while ( (paperAuthors[i] == ' ' || paperAuthors[i] == ',') && paperAuthors[i] != '\0') {
-		//~ printf("\tspaces\n");
+		printf("\tspaces\n");
 		name[namePtr] = paperAuthors[i];
 		i++;
 		namePtr++;
 	}
 	// fname
-	while (paperAuthors[i] != ',' && paperAuthors[i] != '\0') {
-		//~ printf("\tfname\n");
+	while (paperAuthors[i] != ',' && paperAuthors[i] != '\0' && paperAuthors[i] != ' ') {
+		printf("\tfname\n");
 		name[namePtr] = paperAuthors[i];
 		fname[fnamePtr] = paperAuthors[i];
 		
@@ -221,9 +231,14 @@ char * explodeName(char *paperAuthors, char *name, char *fname, char *lname){
 		fnamePtr++;
 		i++;
 	}
+	while (paperAuthors[i] != ',' && paperAuthors[i] != '\0') {
+		name[namePtr] = paperAuthors[i];
+		
+		namePtr++;
+		i++;
+	}
 	
-	
-	//~ printf("\tendstring\n");
+	printf("\tendstring\n");
 	name[namePtr] = '\0';
 	lname[lnamePtr] = '\0';
 	fname[fnamePtr] = '\0';
@@ -231,19 +246,20 @@ char * explodeName(char *paperAuthors, char *name, char *fname, char *lname){
 	return &(paperAuthors[i]);
 }
 
-
 void Paper(char *paperAuthors){
 	char name[LONG_NAME], lname[SHORT_NAME], fname[SHORT_NAME];
 	Author *authors[MAX_PAPER_AUTHORS];
 	int authorsIndex = 0;
 	
 	while (paperAuthors[0] != '\0') {
-		//~ printf("paperAuthors %s\n", paperAuthors);
 		paperAuthors = explodeName(paperAuthors, name, fname, lname);
-		//~ printf("'%s' => '%s', '%s'\n", name, lname, fname);
+		printf("\t'%s' => '%s', '%s'\n", name, lname, fname);
 		
 		authors[authorsIndex] = findAuthor(fname, lname);
 		if (authors[authorsIndex] == NULL){
+			if (strlen(lname) == 0 || strlen(fname) == 0){
+				continue;
+			}
 			authors[authorsIndex] = new Author{name, lname, fname};
 			addAuthor(authors[authorsIndex]);
 		}
@@ -265,7 +281,6 @@ void freeMemory(){
 	globalqueueB = NULL;
 	clearAuhtors();
 }
-
 
 int main(int argc, char **argv){
 	int scenarios, papers, names;
@@ -309,13 +324,13 @@ int main(int argc, char **argv){
 			
 			a = findAuthor(fname, lname);
 			if (a == NULL){
-				printf("%s infinity\n", name);
+				printf("%s infinity\n", bigname);
 			} else {
 				int d = a->erdos();
 				if (d < 0){
-					printf("%s infinity\n", name);
+					printf("%s infinity\n", bigname);
 				} else {
-					printf("%s %d\n", name, d);
+					printf("%s %d\n", bigname, d);
 				}
 			}
 		}

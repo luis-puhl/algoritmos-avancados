@@ -1,0 +1,13 @@
+Scenario 1
+    Smith, M.N. 1
+    Hsueh, Z. infinity
+      Chen, X. 2
+    Erdos, P. 0
+    Erdos,  P. 0
+    Reisig, W. 1
+Scenario 2
+    Smith, M.N. 1
+    Smith, M.N.  1
+Scenario 3
+    Smith, M.N. infinity
+    Johnson infinity
