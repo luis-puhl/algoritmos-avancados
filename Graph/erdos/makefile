@@ -7,3 +7,6 @@ clean.exe: clean.cpp
 testclean: clean.exe in expected
 	./clean.exe < in > out
 	diff -y out expected
+
+atest: a.exe in
+	./a.exe < in

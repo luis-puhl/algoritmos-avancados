@@ -11,11 +11,13 @@
 using namespace std;
 int erdosRunner(int target);
 
-#define MAP_MULTI  140
-#define MAX_MAP 360 * MAP_MULTI
-#define SHORT_NAME 41
-#define LONG_NAME 2*SHORT_NAME + 20
-#define MAX_PAPER_AUTHORS 101
+// multiplicidade para ter MAX_MAP >= 5001 (20 nomes comecando com a mesma letra
+#define MAP_MULTI  20
+#define MAX_MAP 255 * MAP_MULTI
+#define MAX_NAME_LEN 101 
+#define MAX_PAPER_AUTHORS 5001 
+#define MAX_INPUT_LEN 10001 
+#define MAX_LINKS 501 
 
 class Author {
 	public:
@@ -23,7 +25,7 @@ class Author {
 	static Author *erdosPtr;
 	int id;
 	
-	Author *publicouComArr[MAX_MAP];
+	Author *publicouComArr[MAX_LINKS];
 	int publicouComArrIndex = 0;
 	
 	int erdosNumber = -1;
@@ -41,12 +43,21 @@ class Author {
 			erdosPtr = this;
 			this->erdosNumber = 0;
 		}
+		printf("\tauhor '%s' alocated as %d\n", this->lname, this->id);
 	}
 	/** @memory_leak(não verifica se já tem para poupar tempo) */
 	void publicouCom (Author *a){
 		if (this->id != a->id){
 			printf("\t'%s' publicou com '%s'\n", this->lname, a->lname);
-			publicouComArr[publicouComArrIndex++] = a;
+			for (int i = 0; i < publicouComArrIndex+1; i++){
+				if (publicouComArr[i] == a){
+					break;
+				}
+				if (publicouComArr[i] == NULL){
+					publicouComArr[i] = a;
+					publicouComArrIndex++;
+				}
+			}
 		}
 	}
 	void pushErdosNumber(int newNumber){
@@ -142,13 +153,20 @@ int erdosRunner(int target){
 Author *map[MAX_MAP];
 int indexName(char *lname){
 	char ch = lname[0];
-	ch = (ch >= 'A' && ch <= 'Z')? tolower(ch): ch;
-	return (ch - 'a') * MAP_MULTI;
+	return ch * MAP_MULTI;
 }
 void addAuthor(Author *a){
 	int i = indexName(a->lname);
 	//~ printf("\tadding %s %d\n", a->lname, i);
+	// tenta alocar 
 	for (; i < MAX_MAP; i++){
+		if ( map[i] == NULL ){
+			map[i] = a;
+			return;
+		}
+	}
+	// se não consegue antes do final do vetor volta ao inicio
+	for (i = 0; i < MAX_MAP; i++){
 		if ( map[i] == NULL ){
 			map[i] = a;
 			return;
@@ -159,6 +177,7 @@ Author *findAuthor(char *fname, char *lname){
 	int i = indexName(lname) - 1;
 	int flag = 2;
 	//~ printf("\tlooking for %s %d\n", lname, i);
+	// busca do 'hash' até o final
 	for (; i < MAX_MAP; i++){
 		if ( map[i] == NULL ){
 			flag--;
@@ -166,6 +185,13 @@ Author *findAuthor(char *fname, char *lname){
 			break;
 		}
 		//~ printf("\t iteration %s\n", map[i]->lname);
+		if ( strcmp( map[i]->lname, lname ) == 0 && strcmp( map[i]->fname, fname ) == 0){
+			//~ printf("\t found\n");
+			return map[i];
+		}
+	}
+	// se estava tudo lotado procura do comeco
+	for (i = 0; i < MAX_MAP; i++){
 		if ( strcmp( map[i]->lname, lname ) == 0 && strcmp( map[i]->fname, fname ) == 0){
 			//~ printf("\t found\n");
 			return map[i];
@@ -294,7 +320,7 @@ int main(int argc, char **argv){
 		
 		for (paper = 1; paper <= papers ; paper++){
 			// scan papers
-			char paperAuthors[MAX_PAPER_AUTHORS*LONG_NAME];
+			char paperAuthors[MAX_INPUT_LEN];
 			
 			// Smith, M.N., Martin, G., Erdos, P.: Newtonian forms of prime factor matrices
 			if ( scanf("%[^:]s\n", paperAuthors) != 1 ) printf("scanf problems\n");
@@ -315,7 +341,7 @@ int main(int argc, char **argv){
 		
 		printf("Scenario %d\n", scenario);
 		for (nameInd = 1; nameInd <= names; nameInd++){
-			char name[LONG_NAME], lname[SHORT_NAME], fname[SHORT_NAME], bigname[LONG_NAME];
+			char name[LONG_NAME], lname[SHORT_NAME], fname[SHORT_NAME], bigname[MAX_INPUT_LEN];
 			Author *a;
 			if ( scanf("%[^\n]s\n", bigname) < 1 ) printf("bigname scanf problems\n");
 			while ( getchar() != '\n');
