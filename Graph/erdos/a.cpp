@@ -6,14 +6,16 @@
 //~ #include <iostream>
 //~ #include <vector>
 //~ #include <cmath>
+#include <set>
 #include <queue>
 
 using namespace std;
 int erdosRunner(int target);
 
-// multiplicidade para ter MAX_MAP >= 5001 (20 nomes comecando com a mesma letra
-#define MAP_MULTI  20
-#define MAX_MAP 255 * MAP_MULTI
+// multiplicidade para ter MAX_MAP >= 5001
+// nomes comecando com a mesma letra
+#define MAP_MULTI  53
+#define MAX_MAP 95 * MAP_MULTI
 #define MAX_NAME_LEN 101 
 #define MAX_PAPER_AUTHORS 5001 
 #define MAX_INPUT_LEN 10001 
@@ -30,13 +32,12 @@ class Author {
 	
 	int erdosNumber = -1;
 	
-	char name[LONG_NAME], lname[SHORT_NAME], fname[SHORT_NAME];
-	Author (char *name, char *lname, char *fname){
+	char lname[MAX_NAME_LEN], fname[MAX_NAME_LEN];
+	Author (char *lname, char *fname){
 		if (strlen(lname) == 0 || strlen(fname) == 0){
 			throw 1;
 		}
 		this->id = this->idCounter++;
-		strcpy(this->name, name);
 		strcpy(this->lname, lname);
 		strcpy(this->fname, fname);
 		if ( strcmp("P.", fname) == 0 && strcmp("Erdos", lname) == 0){
@@ -75,6 +76,59 @@ class Author {
 int Author::idCounter = 0;
 Author *Author::erdosPtr = NULL;
 
+set<int> targets;
+int isTarget(int id){
+	set<int>::iterator it = targets.find(id);
+	if (*it == id){
+		targets.erase(it);
+		return 1;
+	}
+	return 0;
+}
+/**
+ * @param a queue
+ * @param d depth
+ * @param @output f flag
+ * @return new queue
+ **/
+queue<Author*> *consume(queue<Author*> *in, int d, int *f){
+	queue<Author*> *out;
+	out = new queue<Author*>;
+	while (in != NULL && !in->empty()){
+		Author* a = in->front();
+		in->pop();
+		if (a == NULL){
+			break;
+		}
+		a->pushErdosNumber(d);
+		if ( isTarget(a->id) ){
+			*f = 1;
+		}
+		for (int i = 0; i < a->publicouComArrIndex; i++){
+			Author* v = a->publicouComArr[i];
+			if (v->erdosNumber == -1 || v->erdosNumber > d){
+				out->push(v);
+				v->pushErdosNumber(d+1);
+			}
+		}
+	}
+	return out;
+}
+
+queue<Author*> *toVisit;
+int depth;
+void erdosCalculate(){
+	int flag = 0;
+	if (toVisit == NULL){
+		toVisit = new queue<Author*>;
+		toVisit->push(Author::erdosPtr);
+		depth = 0;
+	}
+	do {
+		toVisit = consume(toVisit, depth, flag);
+	} while (!flag);
+}
+
 void erdosIterate(queue<Author*> **queueOri, queue<Author*> **queueDes, int depth, int target, int *foundFLag){
 	Author *a;
 	while (queueOri != NULL && !(*queueOri)->empty() && !(*foundFLag)){
@@ -84,7 +138,7 @@ void erdosIterate(queue<Author*> **queueOri, queue<Author*> **queueDes, int dept
 			continue;
 		}
 		a->pushErdosNumber(depth);
-		printf("\tlooking '%s' = %d\n", a->lname, a->id);
+		printf("\t\tlooking '%s' = %d\n", a->lname, a->id);
 		if (a->id == target){
 			(*foundFLag) = 1;
 		}
@@ -102,24 +156,35 @@ void erdosIterate(queue<Author*> **queueOri, queue<Author*> **queueDes, int dept
 queue<Author*> *globalqueueA, *globalqueueB;
 int erdosRunner(int target){
 	queue<Author*> *queueA, *queueB;
-	int depth = 0;
+	int depth;
 	int foundFLag = 0;
 	
 	if (globalqueueA != NULL && globalqueueB != NULL){
 		// já comecou o processo
 		printf("\tRetomando processo\n");
-		queueA = globalqueueA;
-		queueB = globalqueueB;
-		depth = globalqueueA->front()->erdosNumber;
+		if (!globalqueueA->empty()){
+			queueA = globalqueueA;
+			queueB = globalqueueB;
+		} else if (!globalqueueB->empty()){
+			queueA = globalqueueB;
+			queueB = globalqueueA;
+		} else {
+			printf("\tfilas vazias\n");
+			return -1;
+		}
+		printf("\tRetomando em profundidade %d\n", depth);
+		depth = queueA->front()->erdosNumber;
 	} else {
 		// nao iniciado ainda
 		printf("\tIniciando processo com Erdos\n");
 		queueA = new queue<Author*>;
 		queueB = new queue<Author*>;
 		queueA->push(Author::erdosPtr);
+		depth = 0;
 	}
 	
 	printf("\tlooking for %d\n", target);
+	fflush(stdout);
 	
 	while (1){
 		if (queueA != NULL && queueB != NULL && !queueA->empty()){
@@ -153,7 +218,7 @@ int erdosRunner(int target){
 Author *map[MAX_MAP];
 int indexName(char *lname){
 	char ch = lname[0];
-	return ch * MAP_MULTI;
+	return (ch - 0x21) * MAP_MULTI;
 }
 void addAuthor(Author *a){
 	int i = indexName(a->lname);
@@ -174,27 +239,33 @@ void addAuthor(Author *a){
 	}
 }
 Author *findAuthor(char *fname, char *lname){
-	int i = indexName(lname) - 1;
+	int i = indexName(lname);
 	int flag = 2;
-	//~ printf("\tlooking for %s %d\n", lname, i);
+	printf("\tlooking for %s %d\n", lname, i);
 	// busca do 'hash' até o final
 	for (; i < MAX_MAP; i++){
+		//~ printf("\t iteration %d %llx\n", i, (long long int)(map[i]) );
 		if ( map[i] == NULL ){
 			flag--;
 			if (flag) continue;
 			break;
 		}
-		//~ printf("\t iteration %s\n", map[i]->lname);
+		printf("\t iteration %s\n", map[i]->lname);
 		if ( strcmp( map[i]->lname, lname ) == 0 && strcmp( map[i]->fname, fname ) == 0){
 			//~ printf("\t found\n");
 			return map[i];
 		}
 	}
 	// se estava tudo lotado procura do comeco
-	for (i = 0; i < MAX_MAP; i++){
-		if ( strcmp( map[i]->lname, lname ) == 0 && strcmp( map[i]->fname, fname ) == 0){
-			//~ printf("\t found\n");
-			return map[i];
+	if (!flag){
+		for (i = 0; i < MAX_MAP; i++){
+			if (map[i] == NULL){
+				break;
+			}
+			if (strcmp( map[i]->lname, lname ) == 0 && strcmp( map[i]->fname, fname ) == 0){
+				printf("\t found\n");
+				return map[i];
+			}
 		}
 	}
 	return NULL;
@@ -208,10 +279,10 @@ void clearAuhtors(){
 	}
 }
 
-char * explodeName(char *paperAuthors, char *name, char *fname, char *lname){
+char * explodeName(char *paperAuthors, char *fname, char *lname){
 	// paperAuthors = "Smith, M.N., Martin, G., Erdos, P."
 	int i = -1, flag = 0;
-	int namePtr = 0, lnamePtr = 0, fnamePtr = 0;
+	int lnamePtr = 0, fnamePtr = 0;
 	
 	flag = 1;
 	do {
@@ -225,47 +296,35 @@ char * explodeName(char *paperAuthors, char *name, char *fname, char *lname){
 	} while (flag);
 	
 	while (paperAuthors[i] == ' '){
-		name[namePtr] = paperAuthors[i];
-		namePtr++;
 		i++;
 	}
 	
 	// lname
 	while (paperAuthors[i] != ',' && paperAuthors[i] != '\0') {
-		printf("\tlname\n");
-		name[namePtr] = paperAuthors[i];
+		//~ printf("\tlname\n");
 		lname[lnamePtr] = paperAuthors[i];
 		
-		namePtr++;
 		lnamePtr++;
 		i++;
 	}
 	// spaces
 	while ( (paperAuthors[i] == ' ' || paperAuthors[i] == ',') && paperAuthors[i] != '\0') {
-		printf("\tspaces\n");
-		name[namePtr] = paperAuthors[i];
+		//~ printf("\tspaces\n");
 		i++;
-		namePtr++;
 	}
 	// fname
 	while (paperAuthors[i] != ',' && paperAuthors[i] != '\0' && paperAuthors[i] != ' ') {
-		printf("\tfname\n");
-		name[namePtr] = paperAuthors[i];
+		//~ printf("\tfname\n");
 		fname[fnamePtr] = paperAuthors[i];
 		
-		namePtr++;
 		fnamePtr++;
 		i++;
 	}
 	while (paperAuthors[i] != ',' && paperAuthors[i] != '\0') {
-		name[namePtr] = paperAuthors[i];
-		
-		namePtr++;
 		i++;
 	}
 	
 	printf("\tendstring\n");
-	name[namePtr] = '\0';
 	lname[lnamePtr] = '\0';
 	fname[fnamePtr] = '\0';
 	
@@ -273,20 +332,20 @@ char * explodeName(char *paperAuthors, char *name, char *fname, char *lname){
 }
 
 void Paper(char *paperAuthors){
-	char name[LONG_NAME], lname[SHORT_NAME], fname[SHORT_NAME];
+	char lname[MAX_NAME_LEN], fname[MAX_NAME_LEN];
 	Author *authors[MAX_PAPER_AUTHORS];
 	int authorsIndex = 0;
 	
 	while (paperAuthors[0] != '\0') {
-		paperAuthors = explodeName(paperAuthors, name, fname, lname);
-		printf("\t'%s' => '%s', '%s'\n", name, lname, fname);
+		paperAuthors = explodeName(paperAuthors, fname, lname);
+		printf("\t'%s' => '%s', '%s'\n", paperAuthors, lname, fname);
 		
 		authors[authorsIndex] = findAuthor(fname, lname);
 		if (authors[authorsIndex] == NULL){
 			if (strlen(lname) == 0 || strlen(fname) == 0){
 				continue;
 			}
-			authors[authorsIndex] = new Author{name, lname, fname};
+			authors[authorsIndex] = new Author{lname, fname};
 			addAuthor(authors[authorsIndex]);
 		}
 		authorsIndex++;
@@ -322,8 +381,7 @@ int main(int argc, char **argv){
 			// scan papers
 			char paperAuthors[MAX_INPUT_LEN];
 			
-			// Smith, M.N., Martin, G., Erdos, P.: Newtonian forms of prime factor matrices
-			if ( scanf("%[^:]s\n", paperAuthors) != 1 ) printf("scanf problems\n");
+			scanf("%[^:]s\n", paperAuthors);
 			while ( getchar() != '\n');
 			//~ printf("\n'%s' paperAuthors\n", paperAuthors);
 			// paperAuthors = "Smith, M.N., Martin, G., Erdos, P."
@@ -341,11 +399,11 @@ int main(int argc, char **argv){
 		
 		printf("Scenario %d\n", scenario);
 		for (nameInd = 1; nameInd <= names; nameInd++){
-			char name[LONG_NAME], lname[SHORT_NAME], fname[SHORT_NAME], bigname[MAX_INPUT_LEN];
+			char lname[MAX_NAME_LEN], fname[MAX_NAME_LEN], bigname[MAX_INPUT_LEN];
 			Author *a;
 			if ( scanf("%[^\n]s\n", bigname) < 1 ) printf("bigname scanf problems\n");
 			while ( getchar() != '\n');
-			explodeName(bigname, name, fname, lname);
+			explodeName(bigname, fname, lname);
 			//~ printf("'%s' lname\n", lname);
 			
 			a = findAuthor(fname, lname);
