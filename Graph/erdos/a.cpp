@@ -76,6 +76,8 @@ class Author {
 int Author::idCounter = 0;
 Author *Author::erdosPtr = NULL;
 
+typedef int/8 bit;
+
 set<int> targets;
 int isTarget(int id){
 	printf("\tisTarget(%d)\n", id);
