@@ -78,12 +78,12 @@ Author *Author::erdosPtr = NULL;
 
 set<int> targets;
 int isTarget(int id){
+	printf("\tisTarget(%d)\n", id);
 	set<int>::iterator it = targets.find(id);
 	if (*it == id){
 		targets.erase(it);
-		return 1;
 	}
-	return 0;
+	return targets.empty();
 }
 /**
  * @param a queue
@@ -92,9 +92,11 @@ int isTarget(int id){
  * @return new queue
  **/
 queue<Author*> *consume(queue<Author*> *in, int d, int *f){
+	printf("\tconsume\n");
 	queue<Author*> *out;
 	out = new queue<Author*>;
 	while (in != NULL && !in->empty()){
+		printf("\twhile\n");
 		Author* a = in->front();
 		in->pop();
 		if (a == NULL){
@@ -104,8 +106,13 @@ queue<Author*> *consume(queue<Author*> *in, int d, int *f){
 		if ( isTarget(a->id) ){
 			*f = 1;
 		}
+		printf("\tbefore for publicouComArrIndex = %d\n", a->publicouComArrIndex);
 		for (int i = 0; i < a->publicouComArrIndex; i++){
+			printf("\tfor\n");
 			Author* v = a->publicouComArr[i];
+			if (v == NULL){
+				break;
+			}
 			if (v->erdosNumber == -1 || v->erdosNumber > d){
 				out->push(v);
 				v->pushErdosNumber(d+1);
@@ -125,94 +132,14 @@ void erdosCalculate(){
 		depth = 0;
 	}
 	do {
-		toVisit = consume(toVisit, depth, flag);
-	} while (!flag);
+		toVisit = consume(toVisit, depth, &flag);
+	} while ( !flag || toVisit == NULL || toVisit->empty() );
 }
 
-void erdosIterate(queue<Author*> **queueOri, queue<Author*> **queueDes, int depth, int target, int *foundFLag){
-	Author *a;
-	while (queueOri != NULL && !(*queueOri)->empty() && !(*foundFLag)){
-		a = (*queueOri)->front();
-		(*queueOri)->pop();
-		if (a == NULL){
-			continue;
-		}
-		a->pushErdosNumber(depth);
-		printf("\t\tlooking '%s' = %d\n", a->lname, a->id);
-		if (a->id == target){
-			(*foundFLag) = 1;
-		}
-		
-		for (int i = 0; i < a->publicouComArrIndex; i++){
-			if (a->publicouComArr[i] != NULL && a->publicouComArr[i]->erdosNumber < 0){
-				printf("\t\tpushing '%s'\n", a->publicouComArr[i]->lname);
-				(*queueDes)->push(a->publicouComArr[i]);
-				a->publicouComArr[i]->pushErdosNumber(depth+1);
-			}
-		}
-	}
-}
-
-queue<Author*> *globalqueueA, *globalqueueB;
 int erdosRunner(int target){
-	queue<Author*> *queueA, *queueB;
-	int depth;
-	int foundFLag = 0;
-	
-	if (globalqueueA != NULL && globalqueueB != NULL){
-		// já comecou o processo
-		printf("\tRetomando processo\n");
-		if (!globalqueueA->empty()){
-			queueA = globalqueueA;
-			queueB = globalqueueB;
-		} else if (!globalqueueB->empty()){
-			queueA = globalqueueB;
-			queueB = globalqueueA;
-		} else {
-			printf("\tfilas vazias\n");
-			return -1;
-		}
-		printf("\tRetomando em profundidade %d\n", depth);
-		depth = queueA->front()->erdosNumber;
-	} else {
-		// nao iniciado ainda
-		printf("\tIniciando processo com Erdos\n");
-		queueA = new queue<Author*>;
-		queueB = new queue<Author*>;
-		queueA->push(Author::erdosPtr);
-		depth = 0;
-	}
-	
-	printf("\tlooking for %d\n", target);
-	fflush(stdout);
-	
-	while (1){
-		if (queueA != NULL && queueB != NULL && !queueA->empty()){
-			printf("\tdepth = %d\n", depth);
-			erdosIterate(&queueA, &queueB, depth, target, &foundFLag);
-			if (foundFLag){
-				globalqueueA = queueA;
-				globalqueueB = queueB;
-				break;
-			}
-			depth++;
-		}
-		if (queueA != NULL && queueB != NULL && !queueB->empty()){
-			printf("\tdepth = %d\n", depth);
-			erdosIterate(&queueB, &queueA, depth, target, &foundFLag);
-			if (foundFLag){
-				globalqueueA = queueB;
-				globalqueueB = queueA;
-				break;
-			}
-			depth++;
-		}
-		if (queueA == NULL || queueB == NULL || (queueA->empty() && queueB->empty()) ){
-			break;
-		}
-	}
-	
-	return foundFLag;
+	targets.insert(target);
+	//~ erdosCalculate();
+	return 0;
 }
 
 Author *map[MAX_MAP];
@@ -360,10 +287,9 @@ void Paper(char *paperAuthors){
 }
 
 void freeMemory(){
-	delete globalqueueA;
-	delete globalqueueB;
-	globalqueueA = NULL;
-	globalqueueB = NULL;
+	delete toVisit;
+	toVisit = NULL;
+	targets.clear();
 	clearAuhtors();
 }
 

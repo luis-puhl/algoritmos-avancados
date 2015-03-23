@@ -1,90 +1,24 @@
-	endstring
-	', Martin, G., Erdos, P.' => 'Smith', 'M.N.'
-	looking for Smith 2650
-	auhor 'Smith' alocated as 0
-	endstring
-	', Erdos, P.' => 'Martin', 'G.'
-	looking for Martin 2332
-	auhor 'Martin' alocated as 1
-	endstring
-	'' => 'Erdos', 'P.'
-	looking for Erdos 1908
-	auhor 'Erdos' alocated as 2
-	'Smith' publicou com 'Martin'
-	'Smith' publicou com 'Erdos'
-	'Martin' publicou com 'Smith'
-	'Martin' publicou com 'Erdos'
-	'Erdos' publicou com 'Smith'
-	'Erdos' publicou com 'Martin'
-	endstring
-	', Reisig, W.' => 'Erdos', 'P.'
-	looking for Erdos 1908
-	 iteration Erdos
-	endstring
-	'' => 'Reisig', 'W.'
-	looking for Reisig 2597
-	auhor 'Reisig' alocated as 3
-	'Erdos' publicou com 'Reisig'
-	'Reisig' publicou com 'Erdos'
-	endstring
-	', Chen, X.' => 'Smith', 'M.N.'
-	looking for Smith 2650
-	 iteration Smith
-	endstring
-	'' => 'Chen', 'X.'
-	looking for Chen 1802
-	auhor 'Chen' alocated as 4
-	'Smith' publicou com 'Chen'
-	'Chen' publicou com 'Smith'
-	endstring
-	', Hsueh, Z.' => 'Jablonski', 'T.'
-	looking for Jablonski 2173
-	auhor 'Jablonski' alocated as 5
-	endstring
-	'' => 'Hsueh', 'Z.'
-	looking for Hsueh 2067
-	auhor 'Hsueh' alocated as 6
-	'Jablonski' publicou com 'Hsueh'
-	'Hsueh' publicou com 'Jablonski'
 Scenario 1
-	endstring
-	looking for Smith 2650
-	 iteration Smith
-	Iniciando processo com Erdos
-	looking for 0
-	depth = 0
-	looking 'Erdos' = 2
-		pushing 'Smith'
-	depth = 1
-	looking 'Smith' = 0
-		pushing 'Martin'
-Smith, M.N. 1
-	endstring
-	looking for Hsueh 2067
-	 iteration Hsueh
-	Retomando processo
-	Retomando em profundidade 0
-	looking for 6
-	depth = 2
-	looking 'Martin' = 1
-Hsueh, Z. infinity
-	endstring
-	looking for Chen 1802
-	 iteration Chen
-	Retomando processo
-	filas vazias
-  Chen, X. infinity
-	endstring
-	looking for Erdos 1908
-	 iteration Erdos
+ Smith,          M.N. 1
+   Hsueh,    Z. infinity
+Chen, X. infinity
+Scenario 2
 Erdos, P. 0
-	endstring
-	looking for Erdos 1908
-	 iteration Erdos
-Erdos,  P. 0
-	endstring
-	looking for Reisig 2597
-	 iteration Reisig
-	Retomando processo
-	filas vazias
-Reisig, W. infinity
+A, A. infinity
+B, B. infinity
+C, C. infinity
+D, D. infinity
+E, E. infinity
+F, F. infinity
+G, G. infinity
+H, H. infinity
+I, I. infinity
+J, J. infinity
+K, K. infinity
+L, L. infinity
+M, M. infinity
+N, N. infinity
+O, O. infinity
+WTF, F. infinity
+WTF. infinity
+WTF, U. infinity
