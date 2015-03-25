@@ -17,3 +17,6 @@ b.exe: b.cpp
 btest: b.exe in
 	./b.exe < in > out
 	diff -y out expected
+
+bshorttest: b.exe in
+	./b.exe < short_in | less
