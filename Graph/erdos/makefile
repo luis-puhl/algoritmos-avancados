@@ -10,3 +10,10 @@ testclean: clean.exe in expected
 
 atest: a.exe in
 	./a.exe < in
+
+b.exe: b.cpp
+	g++ -Wall -o "b.exe" "b.cpp" -lm -lcrypt -O2 -std=c++11 -pipe -DONLINE_JUDGE
+
+btest: b.exe in
+	./b.exe < in > out
+	diff -y out expected

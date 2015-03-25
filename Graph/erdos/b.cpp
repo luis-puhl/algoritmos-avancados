@@ -3,7 +3,7 @@
 #include <string.h>
 
 #include <set>
-#include <vector>
+#include <list>
 #include <queue>
 #include <string>
 
@@ -97,13 +97,13 @@ class Snode{
 		}
 		printf("id %d -> depht %d\n", this->id, this->depht);
 	}
-	void process(std::set<Snode*> *targets){
+	void process(std::list<Snode*> *targets){
 		int count = 0;
 		std::queue<Snode*> *q, *n;
 		nat depht = 0;
 		n = new std::queue<Snode*>{};
 		n->push(this);
-		targets->erase(this);
+		targets->remove(this);
 		this->depht = depht;
 		while ( !targets->empty() ){
 			printf("level %d: %lu targest to go\n", depht, targets->size());
@@ -125,7 +125,7 @@ class Snode{
 					if ((*i)->depht == 0){
 						n->push((*i));
 						(*i)->depht = depht;
-						targets->erase((*i));
+						targets->remove((*i));
 					}
 				}
 			}
@@ -137,7 +137,7 @@ nat Snode::idCounter = 0;
 
 void testSGraf(){
 	Snode *n = new Snode;
-	std::set<Snode*> targets;
+	std::list<Snode*> targets;
 	Snode *x, *k;
 	for (int i = 0; i < 10; i++){
 		x = new Snode;
@@ -145,7 +145,7 @@ void testSGraf(){
 		k = new Snode;
 		x->push(k);
 	}
-	targets.insert(k);
+	targets.push_back(k);
 	
 	printf("targets %lu\n", targets.size());
 	n->process(&targets);
@@ -170,8 +170,8 @@ class Author: public Snode{
 		return NULL;
 	}
 	std::string lname, fname;
-	Author *erdosPtr;
-	Author (char *lname, char *fname){
+	static Author *erdosPtr;
+	Author (char *lname, char *fname) : Snode() {
 		if (strlen(lname) == 0 || strlen(fname) == 0){
 			throw 1;
 		}
@@ -181,13 +181,54 @@ class Author: public Snode{
 		if ( strcmp("P.", fname) == 0 && strcmp("Erdos", lname) == 0){
 			erdosPtr = this;
 		}
-		printf("\tauhor '%s' alocated as %d\n", this->lname.c_str(), this->id);
+		printf("\tauhor '%s', '%s' alocated as %d\n", this->lname.c_str(), this->fname.c_str(), this->id);
 		authors.insert(this);
 	}
 	void publicouCom(Author *other){
 		this->push(other);
 	}
+	void process(std::list<Author*> *targets){
+		std::list<Snode*> t;
+		for (
+			std::list<Author*>::iterator i = targets->begin();
+			i != targets->end();
+			i++
+		){
+			t.push_back( (Snode*) *i );
+		}
+		Snode::process(&t);
+	}
 };
+std::set<Author*> Author::authors;
+Author* Author::erdosPtr;
+
+void testAuthor(){
+	char lname[MAX_NAME_LEN], fname[MAX_NAME_LEN];
+	strcpy(lname, "Erdos");
+	strcpy(fname, "P.");
+	Author *n = new Author{lname, fname};
+	std::list<Author*> targets;
+	Author *x, *k;
+	for (int i = 0; i < MAX_AUTHORS; i++){
+		lname[0] = lname[0]=='Z'?lname[0]: 'a' - 1;
+		lname[0]<'z' ? lname[0]++ : lname[1]<'z' ? lname[1]++ : lname[2]++;
+		x = new Author{lname, fname};
+		n->push(x);
+		
+		lname[0] = lname[0]=='Z'?lname[0]: 'a' - 1;
+		lname[0]<'z' ? lname[0]++ : lname[1]<'z' ? lname[1]++ : lname[2]++;
+		k = new Author{lname, fname};
+		x->push(k);
+	}
+	targets.push_back(k);
+	
+	printf("targets %lu\n", targets.size());
+	getchar();
+	Author::erdosPtr->process(&targets);
+	
+	getchar();
+	delete n;
+}
 
 char * explodeName(char *paperAuthors, char *fname, char *lname){
 	// paperAuthors = "Smith, M.N., Martin, G., Erdos, P."
@@ -254,19 +295,20 @@ void freeMemory(){
 void UvaErdo(){
 	int scenarios, papers, names;
 	int scenario, paper, nameInd;
+	int scanfreturnvalue;
 	
-	scanf("%d", &scenarios);
+	scanfreturnvalue = scanf("%d", &scenarios);
 	for (scenario = 1; scenario <= scenarios; scenario++){
-		scanf("%d %d\n", &papers, &names);
+		scanfreturnvalue = scanf("%d %d\n", &papers, &names);
+		scanfreturnvalue = scanfreturnvalue / 2;
 		
 		char *ptr;
-		std::vector<Author*> *targets;
 		ptr = (char*)malloc(sizeof(char) * MAX_INPUT_LEN);
 		for (paper = 1; paper <= papers ; paper++){
 			char *paperAuthors;
 			paperAuthors = ptr;
 			
-			scanf("%[^:]s\n", paperAuthors);
+			scanfreturnvalue = scanf("%[^:]s\n", paperAuthors);
 			while ( getchar() != '\n');
 			
 			char lname[MAX_NAME_LEN], fname[MAX_NAME_LEN];
@@ -296,7 +338,8 @@ void UvaErdo(){
 		}
 		
 		printf("Scenario %d\n", scenario);
-		targets = new std::vector<Author*>;
+		std::list<Author*> *targets;
+		targets = new std::list<Author*>;
 		for (nameInd = 1; nameInd <= names; nameInd++){
 			char lname[MAX_NAME_LEN], fname[MAX_NAME_LEN], bigname[MAX_INPUT_LEN];
 			Author *a;
@@ -308,18 +351,19 @@ void UvaErdo(){
 			a = Author::findAuthor(fname, lname);
 			targets->push_back(a);
 		}
-		Author::process(targets);
-		for (std::vector<Author*>::iterator a = targets->begin();
+		
+		Author::erdosPtr->process(targets);
+		for (std::list<Author*>::iterator a = targets->begin();
 			a != targets->end(); a++
 		){
 			if ((*a) == NULL){
-				printf("%s infinity\n", bigname);
+				printf("%s, %s infinity\n", (*a)->lname.c_str(), (*a)->fname.c_str());
 			} else {
-				int d = a->erdos();
+				int d = (*a)->depht;
 				if (d < 0){
-					printf("%s infinity\n", bigname);
+					printf("%s, %s infinity\n", (*a)->lname.c_str(), (*a)->fname.c_str());
 				} else {
-					printf("%s %d\n", bigname, d);
+					printf("%s, %s %d\n", (*a)->lname.c_str(), (*a)->fname.c_str(), d);
 				}
 			}
 		}
@@ -330,7 +374,7 @@ void UvaErdo(){
 
 
 int main(int argc, char **argv){
-	testSGraf();
+	UvaErdo();
 	
 	return 0;
 }
