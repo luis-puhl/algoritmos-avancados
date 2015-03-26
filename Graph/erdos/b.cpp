@@ -266,9 +266,11 @@ void UvaErdo(){
 		unordered_map<string*, Author*> theMap;
 		for (nameInd = 1; nameInd <= names; nameInd++){
 			
-			char bigname[MAX_INPUT_LEN];
+			char *bigname = (char*) malloc( sizeof(char) * MAX_INPUT_LEN );
+			
 			string *fname, *lname;
 			scanfreturnvalue =  scanf("%[^\n]s\n", bigname);
+			//~ getline(cin, bigname);
 			while ( getchar() != '\n');
 			explodeName(bigname, &fname, &lname);
 			printf("\t'%s' => '%s', '%s'\n", bigname, lname->c_str(), fname->c_str());
@@ -278,6 +280,8 @@ void UvaErdo(){
 			
 			pair<string*, Author*> d(bigstring, a);
 			theMap.insert( d );
+			
+			free(bigname);
 		}
 		
 		if (Author::erdosPtr != NULL){
