@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/**
+ * submission id 15223487
+ */
 int **mat;
 int n_rows, m_cols;
 int field_numb;
